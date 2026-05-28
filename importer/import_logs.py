@@ -122,7 +122,7 @@ def import_file(filepath, server_name=None, debug=False):
 # ==========================================================
 # CLI TEST MODE
 # Alleen actief wanneer dit bestand direct wordt gestart.
-# Later kun men dit eenvoudig verwijderen of uitcommentariëren.
+# Kan later verwijderd worden
 # ==========================================================
 if __name__ == "__main__":
     import argparse
