@@ -1,0 +1,619 @@
+2026-03-15T00:00:21.836525+00:00 master rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="2096412" x-info="https://www.rsyslog.com"] rsyslogd was HUPed
+2026-03-15T00:00:21.842723+00:00 master systemd[1]: logrotate.service: Deactivated successfully.
+2026-03-15T00:00:21.843526+00:00 master systemd[1]: Finished logrotate.service - Rotate log files.
+2026-03-15T00:00:21.853793+00:00 master systemd[1]: dpkg-db-backup.service: Deactivated successfully.
+2026-03-15T00:00:21.854776+00:00 master systemd[1]: Finished dpkg-db-backup.service - Daily dpkg database backup service.
+2026-03-15T00:04:12.043479+00:00 master k3s[881]: time="2026-03-15T00:04:12Z" level=info msg="COMPACT compactRev=8205375 targetCompactRev=8205782 currentRev=8206782"
+2026-03-15T00:04:12.076178+00:00 master k3s[881]: time="2026-03-15T00:04:12Z" level=info msg="COMPACT deleted 407 rows from 407 revisions in 33.080069ms - compacted to 8205782/8206782"
+2026-03-15T00:04:12.076335+00:00 master k3s[881]: time="2026-03-15T00:04:12Z" level=info msg="COMPACT compacted from 8205375 to 8205782 in 1 transactions over 34ms"
+2026-03-15T00:04:46.673984+00:00 master k3s[881]: I0315 00:04:46.673432     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T00:05:01.570400+00:00 master CRON[2986791]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T00:07:19.555585+00:00 master systemd[1]: Starting sysstat-summary.service - Generate a daily summary of process accounting...
+2026-03-15T00:07:19.707433+00:00 master systemd[1]: sysstat-summary.service: Deactivated successfully.
+2026-03-15T00:07:19.708231+00:00 master systemd[1]: Finished sysstat-summary.service - Generate a daily summary of process accounting.
+2026-03-15T00:09:12.081428+00:00 master k3s[881]: time="2026-03-15T00:09:12Z" level=info msg="COMPACT compactRev=8205782 targetCompactRev=8206188 currentRev=8207188"
+2026-03-15T00:09:12.089180+00:00 master k3s[881]: time="2026-03-15T00:09:12Z" level=info msg="COMPACT deleted 406 rows from 406 revisions in 8.332944ms - compacted to 8206188/8207188"
+2026-03-15T00:09:12.089321+00:00 master k3s[881]: time="2026-03-15T00:09:12Z" level=info msg="COMPACT compacted from 8205782 to 8206188 in 1 transactions over 9ms"
+2026-03-15T00:10:21.605616+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T00:10:21.628231+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T00:10:21.629116+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T00:14:12.106340+00:00 master k3s[881]: time="2026-03-15T00:14:12Z" level=info msg="COMPACT compactRev=8206188 targetCompactRev=8206592 currentRev=8207592"
+2026-03-15T00:14:12.129059+00:00 master k3s[881]: time="2026-03-15T00:14:12Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 23.167024ms - compacted to 8206592/8207592"
+2026-03-15T00:14:12.129205+00:00 master k3s[881]: time="2026-03-15T00:14:12Z" level=info msg="COMPACT compacted from 8206188 to 8206592 in 1 transactions over 24ms"
+2026-03-15T00:14:46.674991+00:00 master k3s[881]: I0315 00:14:46.674379     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T00:15:01.588741+00:00 master CRON[2995472]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T00:17:01.607568+00:00 master CRON[2997181]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2026-03-15T00:19:12.148536+00:00 master k3s[881]: time="2026-03-15T00:19:12Z" level=info msg="COMPACT compactRev=8206592 targetCompactRev=8206991 currentRev=8207991"
+2026-03-15T00:19:12.157559+00:00 master k3s[881]: time="2026-03-15T00:19:12Z" level=info msg="COMPACT deleted 401 rows from 399 revisions in 9.550153ms - compacted to 8206991/8207991"
+2026-03-15T00:19:12.157716+00:00 master k3s[881]: time="2026-03-15T00:19:12Z" level=info msg="COMPACT compacted from 8206592 to 8206991 in 1 transactions over 10ms"
+2026-03-15T00:20:21.595546+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T00:20:21.615643+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T00:20:21.616431+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T00:24:12.168120+00:00 master k3s[881]: time="2026-03-15T00:24:12Z" level=info msg="COMPACT compactRev=8206991 targetCompactRev=8207393 currentRev=8208393"
+2026-03-15T00:24:12.177067+00:00 master k3s[881]: time="2026-03-15T00:24:12Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 9.544319ms - compacted to 8207393/8208393"
+2026-03-15T00:24:12.177226+00:00 master k3s[881]: time="2026-03-15T00:24:12Z" level=info msg="COMPACT compacted from 8206991 to 8207393 in 1 transactions over 10ms"
+2026-03-15T00:24:46.675780+00:00 master k3s[881]: I0315 00:24:46.675134     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T00:25:01.622701+00:00 master CRON[3004127]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T00:29:12.191172+00:00 master k3s[881]: time="2026-03-15T00:29:12Z" level=info msg="COMPACT compactRev=8207393 targetCompactRev=8207790 currentRev=8208790"
+2026-03-15T00:29:12.200172+00:00 master k3s[881]: time="2026-03-15T00:29:12Z" level=info msg="COMPACT deleted 397 rows from 397 revisions in 9.56182ms - compacted to 8207790/8208790"
+2026-03-15T00:29:12.200307+00:00 master k3s[881]: time="2026-03-15T00:29:12Z" level=info msg="COMPACT compacted from 8207393 to 8207790 in 1 transactions over 10ms"
+2026-03-15T00:30:17.264854+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T00:30:17.274560+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T00:30:17.275009+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T00:34:12.212013+00:00 master k3s[881]: time="2026-03-15T00:34:12Z" level=info msg="COMPACT compactRev=8207790 targetCompactRev=8208191 currentRev=8209191"
+2026-03-15T00:34:12.231609+00:00 master k3s[881]: time="2026-03-15T00:34:12Z" level=info msg="COMPACT deleted 401 rows from 401 revisions in 20.707212ms - compacted to 8208191/8209191"
+2026-03-15T00:34:12.231919+00:00 master k3s[881]: time="2026-03-15T00:34:12Z" level=info msg="COMPACT compacted from 8207790 to 8208191 in 1 transactions over 21ms"
+2026-03-15T00:34:46.676487+00:00 master k3s[881]: I0315 00:34:46.675407     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T00:35:01.643401+00:00 master CRON[3012793]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T00:39:12.251323+00:00 master k3s[881]: time="2026-03-15T00:39:12Z" level=info msg="COMPACT compactRev=8208191 targetCompactRev=8208591 currentRev=8209591"
+2026-03-15T00:39:12.258597+00:00 master k3s[881]: time="2026-03-15T00:39:12Z" level=info msg="COMPACT deleted 401 rows from 400 revisions in 8.508517ms - compacted to 8208591/8209591"
+2026-03-15T00:39:12.258878+00:00 master k3s[881]: time="2026-03-15T00:39:12Z" level=info msg="COMPACT compacted from 8208191 to 8208591 in 1 transactions over 9ms"
+2026-03-15T00:40:06.815174+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T00:40:06.832652+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T00:40:06.833040+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T00:44:12.276134+00:00 master k3s[881]: time="2026-03-15T00:44:12Z" level=info msg="COMPACT compactRev=8208591 targetCompactRev=8208992 currentRev=8209992"
+2026-03-15T00:44:12.285495+00:00 master k3s[881]: time="2026-03-15T00:44:12Z" level=info msg="COMPACT deleted 401 rows from 401 revisions in 10.617715ms - compacted to 8208992/8209992"
+2026-03-15T00:44:12.285815+00:00 master k3s[881]: time="2026-03-15T00:44:12Z" level=info msg="COMPACT compacted from 8208591 to 8208992 in 1 transactions over 11ms"
+2026-03-15T00:44:46.677477+00:00 master k3s[881]: I0315 00:44:46.676277     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T00:45:01.657980+00:00 master CRON[3021433]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T00:49:12.299941+00:00 master k3s[881]: time="2026-03-15T00:49:12Z" level=info msg="COMPACT compactRev=8208992 targetCompactRev=8209396 currentRev=8210396"
+2026-03-15T00:49:12.309251+00:00 master k3s[881]: time="2026-03-15T00:49:12Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 9.834247ms - compacted to 8209396/8210396"
+2026-03-15T00:49:12.309398+00:00 master k3s[881]: time="2026-03-15T00:49:12Z" level=info msg="COMPACT compacted from 8208992 to 8209396 in 1 transactions over 10ms"
+2026-03-15T00:50:13.291576+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T00:50:13.313239+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T00:50:13.313650+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T00:54:12.321535+00:00 master k3s[881]: time="2026-03-15T00:54:12Z" level=info msg="COMPACT compactRev=8209396 targetCompactRev=8209796 currentRev=8210796"
+2026-03-15T00:54:12.331118+00:00 master k3s[881]: time="2026-03-15T00:54:12Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 10.18865ms - compacted to 8209796/8210796"
+2026-03-15T00:54:12.331254+00:00 master k3s[881]: time="2026-03-15T00:54:12Z" level=info msg="COMPACT compacted from 8209396 to 8209796 in 1 transactions over 10ms"
+2026-03-15T00:54:46.676985+00:00 master k3s[881]: I0315 00:54:46.676362     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T00:55:01.672099+00:00 master CRON[3030038]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T00:59:12.347083+00:00 master k3s[881]: time="2026-03-15T00:59:12Z" level=info msg="COMPACT compactRev=8209796 targetCompactRev=8210193 currentRev=8211193"
+2026-03-15T00:59:12.370245+00:00 master k3s[881]: time="2026-03-15T00:59:12Z" level=info msg="COMPACT deleted 397 rows from 397 revisions in 23.673956ms - compacted to 8210193/8211193"
+2026-03-15T00:59:12.370426+00:00 master k3s[881]: time="2026-03-15T00:59:12Z" level=info msg="COMPACT compacted from 8209796 to 8210193 in 1 transactions over 24ms"
+2026-03-15T01:00:19.925167+00:00 master systemd[1]: Starting fake-hwclock-save.service - Save the current clock...
+2026-03-15T01:00:19.930396+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T01:00:19.933433+00:00 master systemd[1]: fake-hwclock-save.service: Deactivated successfully.
+2026-03-15T01:00:19.934361+00:00 master systemd[1]: Finished fake-hwclock-save.service - Save the current clock.
+2026-03-15T01:00:19.959595+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T01:00:19.960520+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T01:04:12.385331+00:00 master k3s[881]: time="2026-03-15T01:04:12Z" level=info msg="COMPACT compactRev=8210193 targetCompactRev=8210598 currentRev=8211598"
+2026-03-15T01:04:12.394339+00:00 master k3s[881]: time="2026-03-15T01:04:12Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 9.590984ms - compacted to 8210598/8211598"
+2026-03-15T01:04:12.394639+00:00 master k3s[881]: time="2026-03-15T01:04:12Z" level=info msg="COMPACT compacted from 8210193 to 8210598 in 1 transactions over 10ms"
+2026-03-15T01:04:46.677514+00:00 master k3s[881]: I0315 01:04:46.676903     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T01:05:01.692418+00:00 master CRON[3038695]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T01:09:12.406162+00:00 master k3s[881]: time="2026-03-15T01:09:12Z" level=info msg="COMPACT compactRev=8210598 targetCompactRev=8210998 currentRev=8211998"
+2026-03-15T01:09:12.415533+00:00 master k3s[881]: time="2026-03-15T01:09:12Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 9.880047ms - compacted to 8210998/8211998"
+2026-03-15T01:09:12.415669+00:00 master k3s[881]: time="2026-03-15T01:09:12Z" level=info msg="COMPACT compacted from 8210598 to 8210998 in 1 transactions over 10ms"
+2026-03-15T01:10:21.591720+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T01:10:21.612416+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T01:10:21.613145+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T01:14:12.430659+00:00 master k3s[881]: time="2026-03-15T01:14:12Z" level=info msg="COMPACT compactRev=8210998 targetCompactRev=8211398 currentRev=8212398"
+2026-03-15T01:14:12.438542+00:00 master k3s[881]: time="2026-03-15T01:14:12Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 8.505038ms - compacted to 8211398/8212398"
+2026-03-15T01:14:12.438677+00:00 master k3s[881]: time="2026-03-15T01:14:12Z" level=info msg="COMPACT compacted from 8210998 to 8211398 in 1 transactions over 9ms"
+2026-03-15T01:14:46.678076+00:00 master k3s[881]: I0315 01:14:46.677472     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T01:15:01.712776+00:00 master CRON[3047346]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T01:17:01.731347+00:00 master CRON[3049065]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2026-03-15T01:19:12.462816+00:00 master k3s[881]: time="2026-03-15T01:19:12Z" level=info msg="COMPACT compactRev=8211398 targetCompactRev=8211797 currentRev=8212797"
+2026-03-15T01:19:12.471974+00:00 master k3s[881]: time="2026-03-15T01:19:12Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 9.643493ms - compacted to 8211797/8212797"
+2026-03-15T01:19:12.472113+00:00 master k3s[881]: time="2026-03-15T01:19:12Z" level=info msg="COMPACT compacted from 8211398 to 8211797 in 1 transactions over 10ms"
+2026-03-15T01:20:21.591569+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T01:20:21.602092+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T01:20:21.602992+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T01:24:12.486789+00:00 master k3s[881]: time="2026-03-15T01:24:12Z" level=info msg="COMPACT compactRev=8211797 targetCompactRev=8212198 currentRev=8213198"
+2026-03-15T01:24:12.510547+00:00 master k3s[881]: time="2026-03-15T01:24:12Z" level=info msg="COMPACT deleted 401 rows from 401 revisions in 24.152628ms - compacted to 8212198/8213198"
+2026-03-15T01:24:12.510732+00:00 master k3s[881]: time="2026-03-15T01:24:12Z" level=info msg="COMPACT compacted from 8211797 to 8212198 in 1 transactions over 25ms"
+2026-03-15T01:24:46.679019+00:00 master k3s[881]: I0315 01:24:46.678353     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T01:25:01.752122+00:00 master CRON[3056020]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T01:29:12.530419+00:00 master k3s[881]: time="2026-03-15T01:29:12Z" level=info msg="COMPACT compactRev=8212198 targetCompactRev=8212598 currentRev=8213598"
+2026-03-15T01:29:12.553790+00:00 master k3s[881]: time="2026-03-15T01:29:12Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 23.595503ms - compacted to 8212598/8213598"
+2026-03-15T01:29:12.553953+00:00 master k3s[881]: time="2026-03-15T01:29:12Z" level=info msg="COMPACT compacted from 8212198 to 8212598 in 1 transactions over 24ms"
+2026-03-15T01:30:21.591170+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T01:30:21.611495+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T01:30:21.611732+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T01:34:12.568717+00:00 master k3s[881]: time="2026-03-15T01:34:12Z" level=info msg="COMPACT compactRev=8212598 targetCompactRev=8212997 currentRev=8213997"
+2026-03-15T01:34:12.577845+00:00 master k3s[881]: time="2026-03-15T01:34:12Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 9.656325ms - compacted to 8212997/8213997"
+2026-03-15T01:34:12.577979+00:00 master k3s[881]: time="2026-03-15T01:34:12Z" level=info msg="COMPACT compacted from 8212598 to 8212997 in 1 transactions over 10ms"
+2026-03-15T01:34:46.679931+00:00 master k3s[881]: I0315 01:34:46.679330     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T01:35:01.771037+00:00 master CRON[3064640]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T01:39:12.588360+00:00 master k3s[881]: time="2026-03-15T01:39:12Z" level=info msg="COMPACT compactRev=8212997 targetCompactRev=8213405 currentRev=8214405"
+2026-03-15T01:39:12.597683+00:00 master k3s[881]: time="2026-03-15T01:39:12Z" level=info msg="COMPACT deleted 408 rows from 408 revisions in 9.91476ms - compacted to 8213405/8214405"
+2026-03-15T01:39:12.597838+00:00 master k3s[881]: time="2026-03-15T01:39:12Z" level=info msg="COMPACT compacted from 8212997 to 8213405 in 1 transactions over 10ms"
+2026-03-15T01:40:21.594346+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T01:40:21.616361+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T01:40:21.616668+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T01:44:12.617387+00:00 master k3s[881]: time="2026-03-15T01:44:12Z" level=info msg="COMPACT compactRev=8213405 targetCompactRev=8213809 currentRev=8214809"
+2026-03-15T01:44:12.638726+00:00 master k3s[881]: time="2026-03-15T01:44:12Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 21.615265ms - compacted to 8213809/8214809"
+2026-03-15T01:44:12.638876+00:00 master k3s[881]: time="2026-03-15T01:44:12Z" level=info msg="COMPACT compacted from 8213405 to 8213809 in 1 transactions over 22ms"
+2026-03-15T01:44:46.680055+00:00 master k3s[881]: I0315 01:44:46.679454     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T01:45:01.786217+00:00 master CRON[3073270]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T01:49:12.655769+00:00 master k3s[881]: time="2026-03-15T01:49:12Z" level=info msg="COMPACT compactRev=8213809 targetCompactRev=8214209 currentRev=8215209"
+2026-03-15T01:49:12.664959+00:00 master k3s[881]: time="2026-03-15T01:49:12Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 9.660709ms - compacted to 8214209/8215209"
+2026-03-15T01:49:12.665118+00:00 master k3s[881]: time="2026-03-15T01:49:12Z" level=info msg="COMPACT compacted from 8213809 to 8214209 in 1 transactions over 10ms"
+2026-03-15T01:50:21.591003+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T01:50:21.599300+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T01:50:21.599598+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T01:54:12.680693+00:00 master k3s[881]: time="2026-03-15T01:54:12Z" level=info msg="COMPACT compactRev=8214209 targetCompactRev=8214610 currentRev=8215610"
+2026-03-15T01:54:12.689751+00:00 master k3s[881]: time="2026-03-15T01:54:12Z" level=info msg="COMPACT deleted 401 rows from 401 revisions in 9.610243ms - compacted to 8214610/8215610"
+2026-03-15T01:54:12.689885+00:00 master k3s[881]: time="2026-03-15T01:54:12Z" level=info msg="COMPACT compacted from 8214209 to 8214610 in 1 transactions over 10ms"
+2026-03-15T01:54:46.680724+00:00 master k3s[881]: I0315 01:54:46.680082     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T01:54:49.801181+00:00 master snapd[801819]: storehelpers.go:916: cannot refresh: snap has no updates available: "core22", "core24", "lxd", "snapd"
+2026-03-15T01:55:01.805783+00:00 master CRON[3081868]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T01:59:12.708333+00:00 master k3s[881]: time="2026-03-15T01:59:12Z" level=info msg="COMPACT compactRev=8214610 targetCompactRev=8215010 currentRev=8216010"
+2026-03-15T01:59:12.717906+00:00 master k3s[881]: time="2026-03-15T01:59:12Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 10.124488ms - compacted to 8215010/8216010"
+2026-03-15T01:59:12.718046+00:00 master k3s[881]: time="2026-03-15T01:59:12Z" level=info msg="COMPACT compacted from 8214610 to 8215010 in 1 transactions over 10ms"
+2026-03-15T02:00:21.590969+00:00 master systemd[1]: Starting fake-hwclock-save.service - Save the current clock...
+2026-03-15T02:00:21.593340+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T02:00:21.601056+00:00 master systemd[1]: fake-hwclock-save.service: Deactivated successfully.
+2026-03-15T02:00:21.601418+00:00 master systemd[1]: Finished fake-hwclock-save.service - Save the current clock.
+2026-03-15T02:00:21.622873+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T02:00:21.623237+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T02:04:12.729064+00:00 master k3s[881]: time="2026-03-15T02:04:12Z" level=info msg="COMPACT compactRev=8215010 targetCompactRev=8215412 currentRev=8216412"
+2026-03-15T02:04:12.739123+00:00 master k3s[881]: time="2026-03-15T02:04:12Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 10.635232ms - compacted to 8215412/8216412"
+2026-03-15T02:04:12.739276+00:00 master k3s[881]: time="2026-03-15T02:04:12Z" level=info msg="COMPACT compacted from 8215010 to 8215412 in 1 transactions over 11ms"
+2026-03-15T02:04:46.681224+00:00 master k3s[881]: I0315 02:04:46.680598     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T02:05:01.825216+00:00 master CRON[3090542]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T02:09:12.752841+00:00 master k3s[881]: time="2026-03-15T02:09:12Z" level=info msg="COMPACT compactRev=8215412 targetCompactRev=8215815 currentRev=8216815"
+2026-03-15T02:09:12.776357+00:00 master k3s[881]: time="2026-03-15T02:09:12Z" level=info msg="COMPACT deleted 403 rows from 403 revisions in 23.841983ms - compacted to 8215815/8216815"
+2026-03-15T02:09:12.776504+00:00 master k3s[881]: time="2026-03-15T02:09:12Z" level=info msg="COMPACT compacted from 8215412 to 8215815 in 1 transactions over 24ms"
+2026-03-15T02:10:05.457590+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T02:10:05.478771+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T02:10:05.479188+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T02:14:12.796060+00:00 master k3s[881]: time="2026-03-15T02:14:12Z" level=info msg="COMPACT compactRev=8215815 targetCompactRev=8216219 currentRev=8217219"
+2026-03-15T02:14:12.815963+00:00 master k3s[881]: time="2026-03-15T02:14:12Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 20.271431ms - compacted to 8216219/8217219"
+2026-03-15T02:14:12.816113+00:00 master k3s[881]: time="2026-03-15T02:14:12Z" level=info msg="COMPACT compacted from 8215815 to 8216219 in 1 transactions over 21ms"
+2026-03-15T02:14:46.681572+00:00 master k3s[881]: I0315 02:14:46.680970     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T02:15:01.844076+00:00 master CRON[3099215]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T02:17:01.861463+00:00 master CRON[3100911]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2026-03-15T02:19:12.831986+00:00 master k3s[881]: time="2026-03-15T02:19:12Z" level=info msg="COMPACT compactRev=8216219 targetCompactRev=8216618 currentRev=8217618"
+2026-03-15T02:19:12.841474+00:00 master k3s[881]: time="2026-03-15T02:19:12Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 9.998463ms - compacted to 8216618/8217618"
+2026-03-15T02:19:12.841611+00:00 master k3s[881]: time="2026-03-15T02:19:12Z" level=info msg="COMPACT compacted from 8216219 to 8216618 in 1 transactions over 10ms"
+2026-03-15T02:20:07.257445+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T02:20:07.265578+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T02:20:07.265895+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T02:24:12.853867+00:00 master k3s[881]: time="2026-03-15T02:24:12Z" level=info msg="COMPACT compactRev=8216618 targetCompactRev=8217017 currentRev=8218017"
+2026-03-15T02:24:12.863119+00:00 master k3s[881]: time="2026-03-15T02:24:12Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 9.786994ms - compacted to 8217017/8218017"
+2026-03-15T02:24:12.863272+00:00 master k3s[881]: time="2026-03-15T02:24:12Z" level=info msg="COMPACT compacted from 8216618 to 8217017 in 1 transactions over 10ms"
+2026-03-15T02:24:46.681667+00:00 master k3s[881]: I0315 02:24:46.681007     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T02:25:01.882231+00:00 master CRON[3107872]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T02:29:12.878734+00:00 master k3s[881]: time="2026-03-15T02:29:12Z" level=info msg="COMPACT compactRev=8217017 targetCompactRev=8217420 currentRev=8218420"
+2026-03-15T02:29:12.901030+00:00 master k3s[881]: time="2026-03-15T02:29:12Z" level=info msg="COMPACT deleted 403 rows from 403 revisions in 22.693302ms - compacted to 8217420/8218420"
+2026-03-15T02:29:12.901174+00:00 master k3s[881]: time="2026-03-15T02:29:12Z" level=info msg="COMPACT compacted from 8217017 to 8217420 in 1 transactions over 23ms"
+2026-03-15T02:30:18.284218+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T02:30:18.306344+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T02:30:18.306953+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T02:34:12.921902+00:00 master k3s[881]: time="2026-03-15T02:34:12Z" level=info msg="COMPACT compactRev=8217420 targetCompactRev=8217820 currentRev=8218820"
+2026-03-15T02:34:12.930540+00:00 master k3s[881]: time="2026-03-15T02:34:12Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 9.184956ms - compacted to 8217820/8218820"
+2026-03-15T02:34:12.930681+00:00 master k3s[881]: time="2026-03-15T02:34:12Z" level=info msg="COMPACT compacted from 8217420 to 8217820 in 1 transactions over 9ms"
+2026-03-15T02:34:46.682788+00:00 master k3s[881]: I0315 02:34:46.682142     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T02:35:01.899835+00:00 master CRON[3116513]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T02:39:12.949576+00:00 master k3s[881]: time="2026-03-15T02:39:12Z" level=info msg="COMPACT compactRev=8217820 targetCompactRev=8218224 currentRev=8219224"
+2026-03-15T02:39:12.964336+00:00 master k3s[881]: time="2026-03-15T02:39:12Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 15.366111ms - compacted to 8218224/8219224"
+2026-03-15T02:39:12.964481+00:00 master k3s[881]: time="2026-03-15T02:39:12Z" level=info msg="COMPACT compacted from 8217820 to 8218224 in 1 transactions over 16ms"
+2026-03-15T02:40:21.594754+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T02:40:21.615162+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T02:40:21.615877+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T02:44:12.970939+00:00 master k3s[881]: time="2026-03-15T02:44:12Z" level=info msg="COMPACT compactRev=8218224 targetCompactRev=8218628 currentRev=8219628"
+2026-03-15T02:44:12.979328+00:00 master k3s[881]: time="2026-03-15T02:44:12Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 10.016559ms - compacted to 8218628/8219628"
+2026-03-15T02:44:12.979576+00:00 master k3s[881]: time="2026-03-15T02:44:12Z" level=info msg="COMPACT compacted from 8218224 to 8218628 in 1 transactions over 10ms"
+2026-03-15T02:44:46.684444+00:00 master k3s[881]: I0315 02:44:46.683279     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T02:45:01.918020+00:00 master CRON[3125100]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T02:49:12.994847+00:00 master k3s[881]: time="2026-03-15T02:49:12Z" level=info msg="COMPACT compactRev=8218628 targetCompactRev=8219035 currentRev=8220035"
+2026-03-15T02:49:13.003523+00:00 master k3s[881]: time="2026-03-15T02:49:13Z" level=info msg="COMPACT deleted 407 rows from 407 revisions in 9.810627ms - compacted to 8219035/8220035"
+2026-03-15T02:49:13.003780+00:00 master k3s[881]: time="2026-03-15T02:49:13Z" level=info msg="COMPACT compacted from 8218628 to 8219035 in 1 transactions over 10ms"
+2026-03-15T02:50:21.594842+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T02:50:21.617872+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T02:50:21.618646+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T02:54:13.019743+00:00 master k3s[881]: time="2026-03-15T02:54:13Z" level=info msg="COMPACT compactRev=8219035 targetCompactRev=8219437 currentRev=8220437"
+2026-03-15T02:54:13.042614+00:00 master k3s[881]: time="2026-03-15T02:54:13Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 23.95134ms - compacted to 8219437/8220437"
+2026-03-15T02:54:13.042879+00:00 master k3s[881]: time="2026-03-15T02:54:13Z" level=info msg="COMPACT compacted from 8219035 to 8219437 in 1 transactions over 25ms"
+2026-03-15T02:54:46.685290+00:00 master k3s[881]: I0315 02:54:46.683996     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T02:55:01.935872+00:00 master CRON[3133733]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T02:59:13.062410+00:00 master k3s[881]: time="2026-03-15T02:59:13Z" level=info msg="COMPACT compactRev=8219437 targetCompactRev=8219842 currentRev=8220842"
+2026-03-15T02:59:13.070395+00:00 master k3s[881]: time="2026-03-15T02:59:13Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 9.24154ms - compacted to 8219842/8220842"
+2026-03-15T02:59:13.070665+00:00 master k3s[881]: time="2026-03-15T02:59:13Z" level=info msg="COMPACT compacted from 8219437 to 8219842 in 1 transactions over 9ms"
+2026-03-15T03:00:21.608237+00:00 master systemd[1]: Starting fake-hwclock-save.service - Save the current clock...
+2026-03-15T03:00:21.613145+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T03:00:21.615373+00:00 master systemd[1]: fake-hwclock-save.service: Deactivated successfully.
+2026-03-15T03:00:21.616144+00:00 master systemd[1]: Finished fake-hwclock-save.service - Save the current clock.
+2026-03-15T03:00:21.643043+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T03:00:21.643441+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T03:04:13.083606+00:00 master k3s[881]: time="2026-03-15T03:04:13Z" level=info msg="COMPACT compactRev=8219842 targetCompactRev=8220242 currentRev=8221242"
+2026-03-15T03:04:13.091956+00:00 master k3s[881]: time="2026-03-15T03:04:13Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 9.740327ms - compacted to 8220242/8221242"
+2026-03-15T03:04:13.092240+00:00 master k3s[881]: time="2026-03-15T03:04:13Z" level=info msg="COMPACT compacted from 8219842 to 8220242 in 1 transactions over 10ms"
+2026-03-15T03:04:46.685444+00:00 master k3s[881]: I0315 03:04:46.684288     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T03:05:01.954069+00:00 master CRON[3142339]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T03:09:13.106391+00:00 master k3s[881]: time="2026-03-15T03:09:13Z" level=info msg="COMPACT compactRev=8220242 targetCompactRev=8220638 currentRev=8221638"
+2026-03-15T03:09:13.114552+00:00 master k3s[881]: time="2026-03-15T03:09:13Z" level=info msg="COMPACT deleted 396 rows from 396 revisions in 9.622195ms - compacted to 8220638/8221638"
+2026-03-15T03:09:13.114833+00:00 master k3s[881]: time="2026-03-15T03:09:13Z" level=info msg="COMPACT compacted from 8220242 to 8220638 in 1 transactions over 10ms"
+2026-03-15T03:10:01.970235+00:00 master CRON[3146696]: (root) CMD (test -e /run/systemd/system || SERVICE_MODE=1 /sbin/e2scrub_all -A -r)
+2026-03-15T03:10:21.591178+00:00 master systemd[1]: Starting e2scrub_all.service - Online ext4 Metadata Check for All Filesystems...
+2026-03-15T03:10:21.595880+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T03:10:21.597874+00:00 master systemd[1]: e2scrub_all.service: Deactivated successfully.
+2026-03-15T03:10:21.598555+00:00 master systemd[1]: Finished e2scrub_all.service - Online ext4 Metadata Check for All Filesystems.
+2026-03-15T03:10:21.625656+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T03:10:21.627139+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T03:14:13.129925+00:00 master k3s[881]: time="2026-03-15T03:14:13Z" level=info msg="COMPACT compactRev=8220638 targetCompactRev=8221039 currentRev=8222039"
+2026-03-15T03:14:13.149346+00:00 master k3s[881]: time="2026-03-15T03:14:13Z" level=info msg="COMPACT deleted 401 rows from 401 revisions in 20.507982ms - compacted to 8221039/8222039"
+2026-03-15T03:14:13.149690+00:00 master k3s[881]: time="2026-03-15T03:14:13Z" level=info msg="COMPACT compacted from 8220638 to 8221039 in 1 transactions over 21ms"
+2026-03-15T03:14:46.685479+00:00 master k3s[881]: I0315 03:14:46.684342     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T03:15:01.982453+00:00 master CRON[3151006]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T03:17:01.995445+00:00 master CRON[3152712]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2026-03-15T03:19:13.162686+00:00 master k3s[881]: time="2026-03-15T03:19:13Z" level=info msg="COMPACT compactRev=8221039 targetCompactRev=8221434 currentRev=8222434"
+2026-03-15T03:19:13.169147+00:00 master k3s[881]: time="2026-03-15T03:19:13Z" level=info msg="COMPACT deleted 395 rows from 395 revisions in 7.921656ms - compacted to 8221434/8222434"
+2026-03-15T03:19:13.169452+00:00 master k3s[881]: time="2026-03-15T03:19:13Z" level=info msg="COMPACT compacted from 8221039 to 8221434 in 1 transactions over 8ms"
+2026-03-15T03:20:21.597704+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T03:20:21.608893+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T03:20:21.609788+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T03:24:13.182488+00:00 master k3s[881]: time="2026-03-15T03:24:13Z" level=info msg="COMPACT compactRev=8221434 targetCompactRev=8221833 currentRev=8222833"
+2026-03-15T03:24:13.202327+00:00 master k3s[881]: time="2026-03-15T03:24:13Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 20.843423ms - compacted to 8221833/8222833"
+2026-03-15T03:24:13.202602+00:00 master k3s[881]: time="2026-03-15T03:24:13Z" level=info msg="COMPACT compacted from 8221434 to 8221833 in 1 transactions over 21ms"
+2026-03-15T03:24:46.686245+00:00 master k3s[881]: I0315 03:24:46.684965     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T03:25:02.009253+00:00 master CRON[3159667]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T03:29:13.223049+00:00 master k3s[881]: time="2026-03-15T03:29:13Z" level=info msg="COMPACT compactRev=8221833 targetCompactRev=8222238 currentRev=8223238"
+2026-03-15T03:29:13.246288+00:00 master k3s[881]: time="2026-03-15T03:29:13Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 24.409586ms - compacted to 8222238/8223238"
+2026-03-15T03:29:13.246690+00:00 master k3s[881]: time="2026-03-15T03:29:13Z" level=info msg="COMPACT compacted from 8221833 to 8222238 in 1 transactions over 25ms"
+2026-03-15T03:30:01.025690+00:00 master CRON[3163987]: (root) CMD (test -e /run/systemd/system || SERVICE_MODE=1 /usr/lib/aarch64-linux-gnu/e2fsprogs/e2scrub_all_cron)
+2026-03-15T03:30:21.587912+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T03:30:21.597664+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T03:30:21.598468+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T03:34:13.263523+00:00 master k3s[881]: time="2026-03-15T03:34:13Z" level=info msg="COMPACT compactRev=8222238 targetCompactRev=8222639 currentRev=8223639"
+2026-03-15T03:34:13.272252+00:00 master k3s[881]: time="2026-03-15T03:34:13Z" level=info msg="COMPACT deleted 401 rows from 401 revisions in 9.875085ms - compacted to 8222639/8223639"
+2026-03-15T03:34:13.272752+00:00 master k3s[881]: time="2026-03-15T03:34:13Z" level=info msg="COMPACT compacted from 8222238 to 8222639 in 1 transactions over 10ms"
+2026-03-15T03:34:46.687654+00:00 master k3s[881]: I0315 03:34:46.686304     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T03:35:01.043786+00:00 master CRON[3168315]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T03:39:13.285691+00:00 master k3s[881]: time="2026-03-15T03:39:13Z" level=info msg="COMPACT compactRev=8222639 targetCompactRev=8223039 currentRev=8224039"
+2026-03-15T03:39:13.294192+00:00 master k3s[881]: time="2026-03-15T03:39:13Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 9.809748ms - compacted to 8223039/8224039"
+2026-03-15T03:39:13.294765+00:00 master k3s[881]: time="2026-03-15T03:39:13Z" level=info msg="COMPACT compacted from 8222639 to 8223039 in 1 transactions over 10ms"
+2026-03-15T03:40:02.740781+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T03:40:02.762083+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T03:40:02.762548+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T03:44:13.311960+00:00 master k3s[881]: time="2026-03-15T03:44:13Z" level=info msg="COMPACT compactRev=8223039 targetCompactRev=8223444 currentRev=8224444"
+2026-03-15T03:44:13.320306+00:00 master k3s[881]: time="2026-03-15T03:44:13Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 9.515436ms - compacted to 8223444/8224444"
+2026-03-15T03:44:13.320602+00:00 master k3s[881]: time="2026-03-15T03:44:13Z" level=info msg="COMPACT compacted from 8223039 to 8223444 in 1 transactions over 10ms"
+2026-03-15T03:44:46.687409+00:00 master k3s[881]: I0315 03:44:46.686201     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T03:45:01.061961+00:00 master CRON[3176964]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T03:49:13.332672+00:00 master k3s[881]: time="2026-03-15T03:49:13Z" level=info msg="COMPACT compactRev=8223444 targetCompactRev=8223847 currentRev=8224847"
+2026-03-15T03:49:13.341056+00:00 master k3s[881]: time="2026-03-15T03:49:13Z" level=info msg="COMPACT deleted 402 rows from 403 revisions in 9.710284ms - compacted to 8223847/8224847"
+2026-03-15T03:49:13.341324+00:00 master k3s[881]: time="2026-03-15T03:49:13Z" level=info msg="COMPACT compacted from 8223444 to 8223847 in 1 transactions over 10ms"
+2026-03-15T03:50:09.531164+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T03:50:09.539331+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T03:50:09.540134+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T03:54:13.354997+00:00 master k3s[881]: time="2026-03-15T03:54:13Z" level=info msg="COMPACT compactRev=8223847 targetCompactRev=8224251 currentRev=8225251"
+2026-03-15T03:54:13.378881+00:00 master k3s[881]: time="2026-03-15T03:54:13Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 24.2445ms - compacted to 8224251/8225251"
+2026-03-15T03:54:13.379031+00:00 master k3s[881]: time="2026-03-15T03:54:13Z" level=info msg="COMPACT compacted from 8223847 to 8224251 in 1 transactions over 25ms"
+2026-03-15T03:54:46.687141+00:00 master k3s[881]: I0315 03:54:46.686491     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T03:55:01.077453+00:00 master CRON[3185612]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T03:59:13.398576+00:00 master k3s[881]: time="2026-03-15T03:59:13Z" level=info msg="COMPACT compactRev=8224251 targetCompactRev=8224650 currentRev=8225650"
+2026-03-15T03:59:13.407639+00:00 master k3s[881]: time="2026-03-15T03:59:13Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 9.497353ms - compacted to 8224650/8225650"
+2026-03-15T03:59:13.407777+00:00 master k3s[881]: time="2026-03-15T03:59:13Z" level=info msg="COMPACT compacted from 8224251 to 8224650 in 1 transactions over 10ms"
+2026-03-15T04:00:15.907827+00:00 master systemd[1]: Starting fake-hwclock-save.service - Save the current clock...
+2026-03-15T04:00:15.912681+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T04:00:15.918432+00:00 master systemd[1]: fake-hwclock-save.service: Deactivated successfully.
+2026-03-15T04:00:15.919577+00:00 master systemd[1]: Finished fake-hwclock-save.service - Save the current clock.
+2026-03-15T04:00:15.928040+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T04:00:15.928784+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T04:04:13.420184+00:00 master k3s[881]: time="2026-03-15T04:04:13Z" level=info msg="COMPACT compactRev=8224650 targetCompactRev=8225049 currentRev=8226049"
+2026-03-15T04:04:13.430137+00:00 master k3s[881]: time="2026-03-15T04:04:13Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 11.529253ms - compacted to 8225049/8226049"
+2026-03-15T04:04:13.430442+00:00 master k3s[881]: time="2026-03-15T04:04:13Z" level=info msg="COMPACT compacted from 8224650 to 8225049 in 1 transactions over 12ms"
+2026-03-15T04:04:46.688709+00:00 master k3s[881]: I0315 04:04:46.687522     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T04:05:01.107625+00:00 master CRON[3194235]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T04:09:13.441337+00:00 master k3s[881]: time="2026-03-15T04:09:13Z" level=info msg="COMPACT compactRev=8225049 targetCompactRev=8225454 currentRev=8226454"
+2026-03-15T04:09:13.464119+00:00 master k3s[881]: time="2026-03-15T04:09:13Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 23.16001ms - compacted to 8225454/8226454"
+2026-03-15T04:09:13.464280+00:00 master k3s[881]: time="2026-03-15T04:09:13Z" level=info msg="COMPACT compacted from 8225049 to 8225454 in 1 transactions over 24ms"
+2026-03-15T04:10:21.606715+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T04:10:21.615018+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T04:10:21.615254+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T04:14:13.479953+00:00 master k3s[881]: time="2026-03-15T04:14:13Z" level=info msg="COMPACT compactRev=8225454 targetCompactRev=8225854 currentRev=8226854"
+2026-03-15T04:14:13.488197+00:00 master k3s[881]: time="2026-03-15T04:14:13Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 9.632988ms - compacted to 8225854/8226854"
+2026-03-15T04:14:13.488480+00:00 master k3s[881]: time="2026-03-15T04:14:13Z" level=info msg="COMPACT compacted from 8225454 to 8225854 in 1 transactions over 10ms"
+2026-03-15T04:14:46.689190+00:00 master k3s[881]: I0315 04:14:46.688039     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T04:15:01.111326+00:00 master CRON[3202922]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T04:17:01.127752+00:00 master CRON[3204645]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2026-03-15T04:19:13.498844+00:00 master k3s[881]: time="2026-03-15T04:19:13Z" level=info msg="COMPACT compactRev=8225854 targetCompactRev=8226254 currentRev=8227254"
+2026-03-15T04:19:13.508132+00:00 master k3s[881]: time="2026-03-15T04:19:13Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 9.752288ms - compacted to 8226254/8227254"
+2026-03-15T04:19:13.508275+00:00 master k3s[881]: time="2026-03-15T04:19:13Z" level=info msg="COMPACT compacted from 8225854 to 8226254 in 1 transactions over 10ms"
+2026-03-15T04:20:21.590221+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T04:20:21.610570+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T04:20:21.610899+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T04:24:13.524437+00:00 master k3s[881]: time="2026-03-15T04:24:13Z" level=info msg="COMPACT compactRev=8226254 targetCompactRev=8226655 currentRev=8227655"
+2026-03-15T04:24:13.546196+00:00 master k3s[881]: time="2026-03-15T04:24:13Z" level=info msg="COMPACT deleted 401 rows from 401 revisions in 22.063844ms - compacted to 8226655/8227655"
+2026-03-15T04:24:13.546354+00:00 master k3s[881]: time="2026-03-15T04:24:13Z" level=info msg="COMPACT compacted from 8226254 to 8226655 in 1 transactions over 23ms"
+2026-03-15T04:24:46.689463+00:00 master k3s[881]: I0315 04:24:46.688809     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T04:25:01.145402+00:00 master CRON[3211610]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T04:29:13.565580+00:00 master k3s[881]: time="2026-03-15T04:29:13Z" level=info msg="COMPACT compactRev=8226655 targetCompactRev=8227057 currentRev=8228057"
+2026-03-15T04:29:13.587546+00:00 master k3s[881]: time="2026-03-15T04:29:13Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 22.371575ms - compacted to 8227057/8228057"
+2026-03-15T04:29:13.587689+00:00 master k3s[881]: time="2026-03-15T04:29:13Z" level=info msg="COMPACT compacted from 8226655 to 8227057 in 1 transactions over 23ms"
+2026-03-15T04:30:21.600541+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T04:30:21.622599+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T04:30:21.623489+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T04:34:13.602807+00:00 master k3s[881]: time="2026-03-15T04:34:13Z" level=info msg="COMPACT compactRev=8227057 targetCompactRev=8227462 currentRev=8228462"
+2026-03-15T04:34:13.612381+00:00 master k3s[881]: time="2026-03-15T04:34:13Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 10.108731ms - compacted to 8227462/8228462"
+2026-03-15T04:34:13.612523+00:00 master k3s[881]: time="2026-03-15T04:34:13Z" level=info msg="COMPACT compacted from 8227057 to 8227462 in 1 transactions over 10ms"
+2026-03-15T04:34:46.689457+00:00 master k3s[881]: I0315 04:34:46.688896     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T04:35:01.165837+00:00 master CRON[3220230]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T04:36:21.596834+00:00 master systemd[1]: Starting man-db.service - Daily man-db regeneration...
+2026-03-15T04:36:21.935416+00:00 master systemd[1]: man-db.service: Deactivated successfully.
+2026-03-15T04:36:21.935913+00:00 master systemd[1]: Finished man-db.service - Daily man-db regeneration.
+2026-03-15T04:39:13.623719+00:00 master k3s[881]: time="2026-03-15T04:39:13Z" level=info msg="COMPACT compactRev=8227462 targetCompactRev=8227873 currentRev=8228873"
+2026-03-15T04:39:13.655586+00:00 master k3s[881]: time="2026-03-15T04:39:13Z" level=info msg="COMPACT deleted 411 rows from 411 revisions in 32.282256ms - compacted to 8227873/8228873"
+2026-03-15T04:39:13.655767+00:00 master k3s[881]: time="2026-03-15T04:39:13Z" level=info msg="COMPACT compacted from 8227462 to 8227873 in 1 transactions over 33ms"
+2026-03-15T04:40:07.266740+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T04:40:07.286824+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T04:40:07.287154+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T04:44:13.662061+00:00 master k3s[881]: time="2026-03-15T04:44:13Z" level=info msg="COMPACT compactRev=8227873 targetCompactRev=8228271 currentRev=8229271"
+2026-03-15T04:44:13.670744+00:00 master k3s[881]: time="2026-03-15T04:44:13Z" level=info msg="COMPACT deleted 398 rows from 398 revisions in 10.051269ms - compacted to 8228271/8229271"
+2026-03-15T04:44:13.671049+00:00 master k3s[881]: time="2026-03-15T04:44:13Z" level=info msg="COMPACT compacted from 8227873 to 8228271 in 1 transactions over 10ms"
+2026-03-15T04:44:46.690748+00:00 master k3s[881]: I0315 04:44:46.689565     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T04:45:01.186569+00:00 master CRON[3228885]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T04:49:13.686638+00:00 master k3s[881]: time="2026-03-15T04:49:13Z" level=info msg="COMPACT compactRev=8228271 targetCompactRev=8228671 currentRev=8229671"
+2026-03-15T04:49:13.705820+00:00 master k3s[881]: time="2026-03-15T04:49:13Z" level=info msg="COMPACT deleted 401 rows from 400 revisions in 20.25159ms - compacted to 8228671/8229671"
+2026-03-15T04:49:13.706082+00:00 master k3s[881]: time="2026-03-15T04:49:13Z" level=info msg="COMPACT compacted from 8228271 to 8228671 in 1 transactions over 21ms"
+2026-03-15T04:50:21.590623+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T04:50:21.600658+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T04:50:21.601494+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T04:54:13.726438+00:00 master k3s[881]: time="2026-03-15T04:54:13Z" level=info msg="COMPACT compactRev=8228671 targetCompactRev=8229074 currentRev=8230074"
+2026-03-15T04:54:13.734760+00:00 master k3s[881]: time="2026-03-15T04:54:13Z" level=info msg="COMPACT deleted 403 rows from 403 revisions in 9.60907ms - compacted to 8229074/8230074"
+2026-03-15T04:54:13.734958+00:00 master k3s[881]: time="2026-03-15T04:54:13Z" level=info msg="COMPACT compacted from 8228671 to 8229074 in 1 transactions over 10ms"
+2026-03-15T04:54:46.691357+00:00 master k3s[881]: I0315 04:54:46.690147     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T04:55:01.206060+00:00 master CRON[3237542]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T04:59:13.811932+00:00 master k3s[881]: time="2026-03-15T04:59:13Z" level=info msg="COMPACT compactRev=8229074 targetCompactRev=8229476 currentRev=8230476"
+2026-03-15T04:59:13.820746+00:00 master k3s[881]: time="2026-03-15T04:59:13Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 9.904257ms - compacted to 8229476/8230476"
+2026-03-15T04:59:13.821060+00:00 master k3s[881]: time="2026-03-15T04:59:13Z" level=info msg="COMPACT compacted from 8229074 to 8229476 in 1 transactions over 10ms"
+2026-03-15T05:00:21.590615+00:00 master systemd[1]: Starting fake-hwclock-save.service - Save the current clock...
+2026-03-15T05:00:21.595402+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T05:00:21.599471+00:00 master systemd[1]: fake-hwclock-save.service: Deactivated successfully.
+2026-03-15T05:00:21.600292+00:00 master systemd[1]: Finished fake-hwclock-save.service - Save the current clock.
+2026-03-15T05:00:21.610662+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T05:00:21.611464+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T05:04:13.842971+00:00 master k3s[881]: time="2026-03-15T05:04:13Z" level=info msg="COMPACT compactRev=8229476 targetCompactRev=8229878 currentRev=8230878"
+2026-03-15T05:04:13.852114+00:00 master k3s[881]: time="2026-03-15T05:04:13Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 9.692201ms - compacted to 8229878/8230878"
+2026-03-15T05:04:13.852273+00:00 master k3s[881]: time="2026-03-15T05:04:13Z" level=info msg="COMPACT compacted from 8229476 to 8229878 in 1 transactions over 10ms"
+2026-03-15T05:04:46.691003+00:00 master k3s[881]: I0315 05:04:46.690377     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T05:05:01.226711+00:00 master CRON[3246195]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T05:09:13.868788+00:00 master k3s[881]: time="2026-03-15T05:09:13Z" level=info msg="COMPACT compactRev=8229878 targetCompactRev=8230283 currentRev=8231283"
+2026-03-15T05:09:13.877398+00:00 master k3s[881]: time="2026-03-15T05:09:13Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 9.854371ms - compacted to 8230283/8231283"
+2026-03-15T05:09:13.877659+00:00 master k3s[881]: time="2026-03-15T05:09:13Z" level=info msg="COMPACT compacted from 8229878 to 8230283 in 1 transactions over 10ms"
+2026-03-15T05:10:00.690513+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T05:10:00.721205+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T05:10:00.721797+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T05:14:13.893285+00:00 master k3s[881]: time="2026-03-15T05:14:13Z" level=info msg="COMPACT compactRev=8230283 targetCompactRev=8230681 currentRev=8231681"
+2026-03-15T05:14:13.915955+00:00 master k3s[881]: time="2026-03-15T05:14:13Z" level=info msg="COMPACT deleted 398 rows from 398 revisions in 23.848087ms - compacted to 8230681/8231681"
+2026-03-15T05:14:13.916239+00:00 master k3s[881]: time="2026-03-15T05:14:13Z" level=info msg="COMPACT compacted from 8230283 to 8230681 in 1 transactions over 24ms"
+2026-03-15T05:14:46.692685+00:00 master k3s[881]: I0315 05:14:46.691472     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T05:15:01.244903+00:00 master CRON[3254840]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T05:17:01.259962+00:00 master CRON[3256556]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2026-03-15T05:19:13.936363+00:00 master k3s[881]: time="2026-03-15T05:19:13Z" level=info msg="COMPACT compactRev=8230681 targetCompactRev=8231080 currentRev=8232080"
+2026-03-15T05:19:13.944744+00:00 master k3s[881]: time="2026-03-15T05:19:13Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 9.855835ms - compacted to 8231080/8232080"
+2026-03-15T05:19:13.945126+00:00 master k3s[881]: time="2026-03-15T05:19:13Z" level=info msg="COMPACT compacted from 8230681 to 8231080 in 1 transactions over 10ms"
+2026-03-15T05:20:06.980219+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T05:20:06.998029+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T05:20:06.998461+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T05:24:13.964467+00:00 master k3s[881]: time="2026-03-15T05:24:13Z" level=info msg="COMPACT compactRev=8231080 targetCompactRev=8231475 currentRev=8232475"
+2026-03-15T05:24:13.971513+00:00 master k3s[881]: time="2026-03-15T05:24:13Z" level=info msg="COMPACT deleted 395 rows from 395 revisions in 8.611788ms - compacted to 8231475/8232475"
+2026-03-15T05:24:13.971809+00:00 master k3s[881]: time="2026-03-15T05:24:13Z" level=info msg="COMPACT compacted from 8231080 to 8231475 in 1 transactions over 9ms"
+2026-03-15T05:24:46.719694+00:00 master k3s[881]: I0315 05:24:46.692240     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T05:25:01.275921+00:00 master CRON[3263532]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T05:29:13.982738+00:00 master k3s[881]: time="2026-03-15T05:29:13Z" level=info msg="COMPACT compactRev=8231475 targetCompactRev=8231871 currentRev=8232871"
+2026-03-15T05:29:13.991661+00:00 master k3s[881]: time="2026-03-15T05:29:13Z" level=info msg="COMPACT deleted 396 rows from 396 revisions in 9.56619ms - compacted to 8231871/8232871"
+2026-03-15T05:29:13.991797+00:00 master k3s[881]: time="2026-03-15T05:29:13Z" level=info msg="COMPACT compacted from 8231475 to 8231871 in 1 transactions over 10ms"
+2026-03-15T05:30:13.773576+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T05:30:13.794086+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T05:30:13.794813+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T05:34:14.003496+00:00 master k3s[881]: time="2026-03-15T05:34:14Z" level=info msg="COMPACT compactRev=8231871 targetCompactRev=8232271 currentRev=8233271"
+2026-03-15T05:34:14.010851+00:00 master k3s[881]: time="2026-03-15T05:34:14Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 8.552575ms - compacted to 8232271/8233271"
+2026-03-15T05:34:14.010968+00:00 master k3s[881]: time="2026-03-15T05:34:14Z" level=info msg="COMPACT compacted from 8231871 to 8232271 in 1 transactions over 9ms"
+2026-03-15T05:34:46.693910+00:00 master k3s[881]: I0315 05:34:46.693272     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T05:35:01.288903+00:00 master CRON[3272171]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T05:39:14.025951+00:00 master k3s[881]: time="2026-03-15T05:39:14Z" level=info msg="COMPACT compactRev=8232271 targetCompactRev=8232670 currentRev=8233670"
+2026-03-15T05:39:14.045977+00:00 master k3s[881]: time="2026-03-15T05:39:14Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 21.080855ms - compacted to 8232670/8233670"
+2026-03-15T05:39:14.046242+00:00 master k3s[881]: time="2026-03-15T05:39:14Z" level=info msg="COMPACT compacted from 8232271 to 8232670 in 1 transactions over 22ms"
+2026-03-15T05:40:20.486770+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T05:40:20.506688+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T05:40:20.507082+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T05:44:14.065646+00:00 master k3s[881]: time="2026-03-15T05:44:14Z" level=info msg="COMPACT compactRev=8232670 targetCompactRev=8233067 currentRev=8234067"
+2026-03-15T05:44:14.085027+00:00 master k3s[881]: time="2026-03-15T05:44:14Z" level=info msg="COMPACT deleted 397 rows from 397 revisions in 19.778774ms - compacted to 8233067/8234067"
+2026-03-15T05:44:14.085184+00:00 master k3s[881]: time="2026-03-15T05:44:14Z" level=info msg="COMPACT compacted from 8232670 to 8233067 in 1 transactions over 20ms"
+2026-03-15T05:44:46.693899+00:00 master k3s[881]: I0315 05:44:46.693294     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T05:45:01.304453+00:00 master CRON[3280797]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T05:49:14.105041+00:00 master k3s[881]: time="2026-03-15T05:49:14Z" level=info msg="COMPACT compactRev=8233067 targetCompactRev=8233471 currentRev=8234471"
+2026-03-15T05:49:14.113756+00:00 master k3s[881]: time="2026-03-15T05:49:14Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 10.038729ms - compacted to 8233471/8234471"
+2026-03-15T05:49:14.114057+00:00 master k3s[881]: time="2026-03-15T05:49:14Z" level=info msg="COMPACT compacted from 8233067 to 8233471 in 1 transactions over 10ms"
+2026-03-15T05:50:21.596801+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T05:50:21.604401+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T05:50:21.604759+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T05:54:14.132817+00:00 master k3s[881]: time="2026-03-15T05:54:14Z" level=info msg="COMPACT compactRev=8233471 targetCompactRev=8233870 currentRev=8234870"
+2026-03-15T05:54:14.153636+00:00 master k3s[881]: time="2026-03-15T05:54:14Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 21.825832ms - compacted to 8233870/8234870"
+2026-03-15T05:54:14.153948+00:00 master k3s[881]: time="2026-03-15T05:54:14Z" level=info msg="COMPACT compacted from 8233471 to 8233870 in 1 transactions over 22ms"
+2026-03-15T05:54:46.694836+00:00 master k3s[881]: I0315 05:54:46.693567     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T05:55:01.321412+00:00 master CRON[3289421]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T05:59:14.176678+00:00 master k3s[881]: time="2026-03-15T05:59:14Z" level=info msg="COMPACT compactRev=8233870 targetCompactRev=8234274 currentRev=8235274"
+2026-03-15T05:59:14.185257+00:00 master k3s[881]: time="2026-03-15T05:59:14Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 9.905134ms - compacted to 8234274/8235274"
+2026-03-15T05:59:14.185550+00:00 master k3s[881]: time="2026-03-15T05:59:14Z" level=info msg="COMPACT compacted from 8233870 to 8234274 in 1 transactions over 10ms"
+2026-03-15T06:00:07.267044+00:00 master systemd[1]: Starting fake-hwclock-save.service - Save the current clock...
+2026-03-15T06:00:07.268531+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T06:00:07.277156+00:00 master systemd[1]: fake-hwclock-save.service: Deactivated successfully.
+2026-03-15T06:00:07.277642+00:00 master systemd[1]: Finished fake-hwclock-save.service - Save the current clock.
+2026-03-15T06:00:07.297240+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T06:00:07.297611+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T06:04:14.199265+00:00 master k3s[881]: time="2026-03-15T06:04:14Z" level=info msg="COMPACT compactRev=8234274 targetCompactRev=8234670 currentRev=8235670"
+2026-03-15T06:04:14.222664+00:00 master k3s[881]: time="2026-03-15T06:04:14Z" level=info msg="COMPACT deleted 396 rows from 396 revisions in 23.722383ms - compacted to 8234670/8235670"
+2026-03-15T06:04:14.222810+00:00 master k3s[881]: time="2026-03-15T06:04:14Z" level=info msg="COMPACT compacted from 8234274 to 8234670 in 1 transactions over 24ms"
+2026-03-15T06:04:46.695018+00:00 master k3s[881]: I0315 06:04:46.694380     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T06:05:01.340246+00:00 master CRON[3298071]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T06:09:14.240298+00:00 master k3s[881]: time="2026-03-15T06:09:14Z" level=info msg="COMPACT compactRev=8234670 targetCompactRev=8235072 currentRev=8236072"
+2026-03-15T06:09:14.262359+00:00 master k3s[881]: time="2026-03-15T06:09:14Z" level=info msg="COMPACT deleted 399 rows from 402 revisions in 22.33074ms - compacted to 8235072/8236072"
+2026-03-15T06:09:14.262508+00:00 master k3s[881]: time="2026-03-15T06:09:14Z" level=info msg="COMPACT compacted from 8234670 to 8235072 in 1 transactions over 23ms"
+2026-03-15T06:10:21.602961+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T06:10:21.625123+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T06:10:21.625633+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T06:14:14.278713+00:00 master k3s[881]: time="2026-03-15T06:14:14Z" level=info msg="COMPACT compactRev=8235072 targetCompactRev=8235472 currentRev=8236472"
+2026-03-15T06:14:14.301165+00:00 master k3s[881]: time="2026-03-15T06:14:14Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 22.90449ms - compacted to 8235472/8236472"
+2026-03-15T06:14:14.301340+00:00 master k3s[881]: time="2026-03-15T06:14:14Z" level=info msg="COMPACT compacted from 8235072 to 8235472 in 1 transactions over 23ms"
+2026-03-15T06:14:46.695500+00:00 master k3s[881]: I0315 06:14:46.694854     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T06:15:01.361018+00:00 master CRON[3306733]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T06:17:01.380025+00:00 master CRON[3308437]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2026-03-15T06:19:14.316542+00:00 master k3s[881]: time="2026-03-15T06:19:14Z" level=info msg="COMPACT compactRev=8235472 targetCompactRev=8235874 currentRev=8236874"
+2026-03-15T06:19:14.325596+00:00 master k3s[881]: time="2026-03-15T06:19:14Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 9.640861ms - compacted to 8235874/8236874"
+2026-03-15T06:19:14.325752+00:00 master k3s[881]: time="2026-03-15T06:19:14Z" level=info msg="COMPACT compacted from 8235472 to 8235874 in 1 transactions over 10ms"
+2026-03-15T06:20:07.266486+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T06:20:07.276606+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T06:20:07.277389+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T06:24:14.337370+00:00 master k3s[881]: time="2026-03-15T06:24:14Z" level=info msg="COMPACT compactRev=8235874 targetCompactRev=8236275 currentRev=8237275"
+2026-03-15T06:24:14.359773+00:00 master k3s[881]: time="2026-03-15T06:24:14Z" level=info msg="COMPACT deleted 401 rows from 401 revisions in 22.809396ms - compacted to 8236275/8237275"
+2026-03-15T06:24:14.359936+00:00 master k3s[881]: time="2026-03-15T06:24:14Z" level=info msg="COMPACT compacted from 8235874 to 8236275 in 1 transactions over 23ms"
+2026-03-15T06:24:46.696220+00:00 master k3s[881]: I0315 06:24:46.695552     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T06:25:01.400654+00:00 master CRON[3315397]: (root) CMD (test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; })
+2026-03-15T06:25:01.400947+00:00 master CRON[3315398]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T06:29:14.380785+00:00 master k3s[881]: time="2026-03-15T06:29:14Z" level=info msg="COMPACT compactRev=8236275 targetCompactRev=8236680 currentRev=8237680"
+2026-03-15T06:29:14.403612+00:00 master k3s[881]: time="2026-03-15T06:29:14Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 23.16059ms - compacted to 8236680/8237680"
+2026-03-15T06:29:14.403755+00:00 master k3s[881]: time="2026-03-15T06:29:14Z" level=info msg="COMPACT compacted from 8236275 to 8236680 in 1 transactions over 24ms"
+2026-03-15T06:30:21.596445+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T06:30:21.618711+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T06:30:21.619595+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T06:34:14.423715+00:00 master k3s[881]: time="2026-03-15T06:34:14Z" level=info msg="COMPACT compactRev=8236680 targetCompactRev=8237082 currentRev=8238082"
+2026-03-15T06:34:14.432917+00:00 master k3s[881]: time="2026-03-15T06:34:14Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 9.756371ms - compacted to 8237082/8238082"
+2026-03-15T06:34:14.433053+00:00 master k3s[881]: time="2026-03-15T06:34:14Z" level=info msg="COMPACT compacted from 8236680 to 8237082 in 1 transactions over 10ms"
+2026-03-15T06:34:46.696641+00:00 master k3s[881]: I0315 06:34:46.696008     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T06:35:01.430959+00:00 master CRON[3324058]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T06:37:51.939776+00:00 master systemd[1]: Starting apt-daily-upgrade.service - Daily apt upgrade and clean activities...
+2026-03-15T06:37:58.514391+00:00 master systemd[1]: apt-daily-upgrade.service: Deactivated successfully.
+2026-03-15T06:37:58.515187+00:00 master systemd[1]: Finished apt-daily-upgrade.service - Daily apt upgrade and clean activities.
+2026-03-15T06:37:58.516080+00:00 master systemd[1]: apt-daily-upgrade.service: Consumed 6.539s CPU time.
+2026-03-15T06:39:14.447598+00:00 master k3s[881]: time="2026-03-15T06:39:14Z" level=info msg="COMPACT compactRev=8237082 targetCompactRev=8237486 currentRev=8238486"
+2026-03-15T06:39:14.456960+00:00 master k3s[881]: time="2026-03-15T06:39:14Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 9.911841ms - compacted to 8237486/8238486"
+2026-03-15T06:39:14.457099+00:00 master k3s[881]: time="2026-03-15T06:39:14Z" level=info msg="COMPACT compacted from 8237082 to 8237486 in 1 transactions over 10ms"
+2026-03-15T06:40:21.593141+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T06:40:21.615541+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T06:40:21.616458+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T06:44:14.471134+00:00 master k3s[881]: time="2026-03-15T06:44:14Z" level=info msg="COMPACT compactRev=8237486 targetCompactRev=8237884 currentRev=8238884"
+2026-03-15T06:44:14.480113+00:00 master k3s[881]: time="2026-03-15T06:44:14Z" level=info msg="COMPACT deleted 398 rows from 398 revisions in 9.504062ms - compacted to 8237884/8238884"
+2026-03-15T06:44:14.480267+00:00 master k3s[881]: time="2026-03-15T06:44:14Z" level=info msg="COMPACT compacted from 8237486 to 8237884 in 1 transactions over 10ms"
+2026-03-15T06:44:46.696943+00:00 master k3s[881]: I0315 06:44:46.696315     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T06:45:01.447610+00:00 master CRON[3332772]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T06:47:01.466143+00:00 master CRON[3334482]: (root) CMD (test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; })
+2026-03-15T06:49:14.491199+00:00 master k3s[881]: time="2026-03-15T06:49:14Z" level=info msg="COMPACT compactRev=8237884 targetCompactRev=8238284 currentRev=8239284"
+2026-03-15T06:49:14.512819+00:00 master k3s[881]: time="2026-03-15T06:49:14Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 21.916834ms - compacted to 8238284/8239284"
+2026-03-15T06:49:14.512967+00:00 master k3s[881]: time="2026-03-15T06:49:14Z" level=info msg="COMPACT compacted from 8237884 to 8238284 in 1 transactions over 22ms"
+2026-03-15T06:50:05.719152+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T06:50:05.747189+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T06:50:05.748059+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T06:54:14.531340+00:00 master k3s[881]: time="2026-03-15T06:54:14Z" level=info msg="COMPACT compactRev=8238284 targetCompactRev=8238692 currentRev=8239692"
+2026-03-15T06:54:14.553877+00:00 master k3s[881]: time="2026-03-15T06:54:14Z" level=info msg="COMPACT deleted 408 rows from 408 revisions in 22.957576ms - compacted to 8238692/8239692"
+2026-03-15T06:54:14.554061+00:00 master k3s[881]: time="2026-03-15T06:54:14Z" level=info msg="COMPACT compacted from 8238284 to 8238692 in 1 transactions over 24ms"
+2026-03-15T06:54:46.697630+00:00 master k3s[881]: I0315 06:54:46.696384     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T06:55:01.486737+00:00 master CRON[3341410]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T06:59:14.570746+00:00 master k3s[881]: time="2026-03-15T06:59:14Z" level=info msg="COMPACT compactRev=8238692 targetCompactRev=8239088 currentRev=8240088"
+2026-03-15T06:59:14.579821+00:00 master k3s[881]: time="2026-03-15T06:59:14Z" level=info msg="COMPACT deleted 396 rows from 396 revisions in 9.572316ms - compacted to 8239088/8240088"
+2026-03-15T06:59:14.579962+00:00 master k3s[881]: time="2026-03-15T06:59:14Z" level=info msg="COMPACT compacted from 8238692 to 8239088 in 1 transactions over 10ms"
+2026-03-15T07:00:12.029232+00:00 master systemd[1]: Starting fake-hwclock-save.service - Save the current clock...
+2026-03-15T07:00:12.031478+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T07:00:12.038641+00:00 master systemd[1]: fake-hwclock-save.service: Deactivated successfully.
+2026-03-15T07:00:12.039007+00:00 master systemd[1]: Finished fake-hwclock-save.service - Save the current clock.
+2026-03-15T07:00:12.061910+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T07:00:12.062818+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T07:04:14.595954+00:00 master k3s[881]: time="2026-03-15T07:04:14Z" level=info msg="COMPACT compactRev=8239088 targetCompactRev=8239492 currentRev=8240492"
+2026-03-15T07:04:14.605497+00:00 master k3s[881]: time="2026-03-15T07:04:14Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 10.096188ms - compacted to 8239492/8240492"
+2026-03-15T07:04:14.605629+00:00 master k3s[881]: time="2026-03-15T07:04:14Z" level=info msg="COMPACT compacted from 8239088 to 8239492 in 1 transactions over 10ms"
+2026-03-15T07:04:46.697741+00:00 master k3s[881]: I0315 07:04:46.696557     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T07:05:01.502414+00:00 master CRON[3350086]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T07:09:14.620255+00:00 master k3s[881]: time="2026-03-15T07:09:14Z" level=info msg="COMPACT compactRev=8239492 targetCompactRev=8239902 currentRev=8240902"
+2026-03-15T07:09:14.636180+00:00 master k3s[881]: time="2026-03-15T07:09:14Z" level=info msg="COMPACT deleted 410 rows from 410 revisions in 16.314096ms - compacted to 8239902/8240902"
+2026-03-15T07:09:14.636535+00:00 master k3s[881]: time="2026-03-15T07:09:14Z" level=info msg="COMPACT compacted from 8239492 to 8239902 in 1 transactions over 17ms"
+2026-03-15T07:10:17.266129+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T07:10:17.286108+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T07:10:17.286518+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T07:14:14.641965+00:00 master k3s[881]: time="2026-03-15T07:14:14Z" level=info msg="COMPACT compactRev=8239902 targetCompactRev=8240302 currentRev=8241302"
+2026-03-15T07:14:14.650168+00:00 master k3s[881]: time="2026-03-15T07:14:14Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 8.773676ms - compacted to 8240302/8241302"
+2026-03-15T07:14:14.650322+00:00 master k3s[881]: time="2026-03-15T07:14:14Z" level=info msg="COMPACT compacted from 8239902 to 8240302 in 1 transactions over 9ms"
+2026-03-15T07:14:46.698144+00:00 master k3s[881]: I0315 07:14:46.696831     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T07:15:01.520104+00:00 master CRON[3358736]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T07:17:01.537932+00:00 master CRON[3360455]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2026-03-15T07:19:14.660956+00:00 master k3s[881]: time="2026-03-15T07:19:14Z" level=info msg="COMPACT compactRev=8240302 targetCompactRev=8240710 currentRev=8241710"
+2026-03-15T07:19:14.670483+00:00 master k3s[881]: time="2026-03-15T07:19:14Z" level=info msg="COMPACT deleted 408 rows from 408 revisions in 9.99293ms - compacted to 8240710/8241710"
+2026-03-15T07:19:14.670617+00:00 master k3s[881]: time="2026-03-15T07:19:14Z" level=info msg="COMPACT compacted from 8240302 to 8240710 in 1 transactions over 10ms"
+2026-03-15T07:20:21.599563+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T07:20:21.622559+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T07:20:21.623420+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T07:24:14.683823+00:00 master k3s[881]: time="2026-03-15T07:24:14Z" level=info msg="COMPACT compactRev=8240710 targetCompactRev=8241112 currentRev=8242112"
+2026-03-15T07:24:14.706100+00:00 master k3s[881]: time="2026-03-15T07:24:14Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 22.674931ms - compacted to 8241112/8242112"
+2026-03-15T07:24:14.706257+00:00 master k3s[881]: time="2026-03-15T07:24:14Z" level=info msg="COMPACT compacted from 8240710 to 8241112 in 1 transactions over 23ms"
+2026-03-15T07:24:46.697628+00:00 master k3s[881]: I0315 07:24:46.697048     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T07:25:01.557445+00:00 master CRON[3367397]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T07:29:14.720335+00:00 master k3s[881]: time="2026-03-15T07:29:14Z" level=info msg="COMPACT compactRev=8241112 targetCompactRev=8241514 currentRev=8242514"
+2026-03-15T07:29:14.729758+00:00 master k3s[881]: time="2026-03-15T07:29:14Z" level=info msg="COMPACT deleted 402 rows from 402 revisions in 9.955559ms - compacted to 8241514/8242514"
+2026-03-15T07:29:14.729915+00:00 master k3s[881]: time="2026-03-15T07:29:14Z" level=info msg="COMPACT compacted from 8241112 to 8241514 in 1 transactions over 10ms"
+2026-03-15T07:30:21.602861+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T07:30:21.626016+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T07:30:21.626884+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T07:34:14.744671+00:00 master k3s[881]: time="2026-03-15T07:34:14Z" level=info msg="COMPACT compactRev=8241514 targetCompactRev=8241918 currentRev=8242918"
+2026-03-15T07:34:14.773857+00:00 master k3s[881]: time="2026-03-15T07:34:14Z" level=info msg="COMPACT deleted 407 rows from 404 revisions in 29.293549ms - compacted to 8241918/8242918"
+2026-03-15T07:34:14.774158+00:00 master k3s[881]: time="2026-03-15T07:34:14Z" level=info msg="COMPACT compacted from 8241514 to 8241918 in 1 transactions over 30ms"
+2026-03-15T07:34:46.698229+00:00 master k3s[881]: I0315 07:34:46.697085     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T07:35:01.580226+00:00 master CRON[3376036]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T07:39:14.780126+00:00 master k3s[881]: time="2026-03-15T07:39:14Z" level=info msg="COMPACT compactRev=8241918 targetCompactRev=8242314 currentRev=8243314"
+2026-03-15T07:39:14.788516+00:00 master k3s[881]: time="2026-03-15T07:39:14Z" level=info msg="COMPACT deleted 396 rows from 396 revisions in 9.811485ms - compacted to 8242314/8243314"
+2026-03-15T07:39:14.788838+00:00 master k3s[881]: time="2026-03-15T07:39:14Z" level=info msg="COMPACT compacted from 8241918 to 8242314 in 1 transactions over 10ms"
+2026-03-15T07:40:21.603084+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T07:40:21.625580+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T07:40:21.626423+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T07:44:14.801509+00:00 master k3s[881]: time="2026-03-15T07:44:14Z" level=info msg="COMPACT compactRev=8242314 targetCompactRev=8242711 currentRev=8243711"
+2026-03-15T07:44:14.819754+00:00 master k3s[881]: time="2026-03-15T07:44:14Z" level=info msg="COMPACT deleted 397 rows from 397 revisions in 19.249618ms - compacted to 8242711/8243711"
+2026-03-15T07:44:14.820029+00:00 master k3s[881]: time="2026-03-15T07:44:14Z" level=info msg="COMPACT compacted from 8242314 to 8242711 in 1 transactions over 20ms"
+2026-03-15T07:44:46.698642+00:00 master k3s[881]: I0315 07:44:46.697488     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T07:45:01.594186+00:00 master CRON[3384608]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T07:49:14.839000+00:00 master k3s[881]: time="2026-03-15T07:49:14Z" level=info msg="COMPACT compactRev=8242711 targetCompactRev=8243115 currentRev=8244115"
+2026-03-15T07:49:14.859832+00:00 master k3s[881]: time="2026-03-15T07:49:14Z" level=info msg="COMPACT deleted 404 rows from 404 revisions in 22.118077ms - compacted to 8243115/8244115"
+2026-03-15T07:49:14.860145+00:00 master k3s[881]: time="2026-03-15T07:49:14Z" level=info msg="COMPACT compacted from 8242711 to 8243115 in 1 transactions over 22ms"
+2026-03-15T07:50:21.596019+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T07:50:21.619152+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T07:50:21.619984+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T07:54:14.865053+00:00 master k3s[881]: time="2026-03-15T07:54:14Z" level=info msg="COMPACT compactRev=8243115 targetCompactRev=8243515 currentRev=8244515"
+2026-03-15T07:54:14.873817+00:00 master k3s[881]: time="2026-03-15T07:54:14Z" level=info msg="COMPACT deleted 400 rows from 400 revisions in 9.334ms - compacted to 8243515/8244515"
+2026-03-15T07:54:14.873960+00:00 master k3s[881]: time="2026-03-15T07:54:14Z" level=info msg="COMPACT compacted from 8243115 to 8243515 in 1 transactions over 10ms"
+2026-03-15T07:54:46.698945+00:00 master k3s[881]: I0315 07:54:46.698265     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T07:55:01.604840+00:00 master CRON[3393225]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T07:59:14.886240+00:00 master k3s[881]: time="2026-03-15T07:59:14Z" level=info msg="COMPACT compactRev=8243515 targetCompactRev=8243914 currentRev=8244914"
+2026-03-15T07:59:14.906157+00:00 master k3s[881]: time="2026-03-15T07:59:14Z" level=info msg="COMPACT deleted 399 rows from 399 revisions in 20.271407ms - compacted to 8243914/8244914"
+2026-03-15T07:59:14.906304+00:00 master k3s[881]: time="2026-03-15T07:59:14Z" level=info msg="COMPACT compacted from 8243515 to 8243914 in 1 transactions over 21ms"
+2026-03-15T08:00:17.285531+00:00 master systemd[1]: Starting fake-hwclock-save.service - Save the current clock...
+2026-03-15T08:00:17.287836+00:00 master systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-15T08:00:17.298807+00:00 master systemd[1]: fake-hwclock-save.service: Deactivated successfully.
+2026-03-15T08:00:17.299124+00:00 master systemd[1]: Finished fake-hwclock-save.service - Save the current clock.
+2026-03-15T08:00:17.302776+00:00 master systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-15T08:00:17.303086+00:00 master systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-15T08:04:14.921487+00:00 master k3s[881]: time="2026-03-15T08:04:14Z" level=info msg="COMPACT compactRev=8243914 targetCompactRev=8244319 currentRev=8245319"
+2026-03-15T08:04:14.943817+00:00 master k3s[881]: time="2026-03-15T08:04:14Z" level=info msg="COMPACT deleted 405 rows from 405 revisions in 22.692998ms - compacted to 8244319/8245319"
+2026-03-15T08:04:14.943968+00:00 master k3s[881]: time="2026-03-15T08:04:14Z" level=info msg="COMPACT compacted from 8243914 to 8244319 in 1 transactions over 23ms"
+2026-03-15T08:04:46.699215+00:00 master k3s[881]: I0315 08:04:46.698662     881 cidrallocator.go:277] updated ClusterIP allocator for Service CIDR 10.43.0.0/16
+2026-03-15T08:04:58.715386+00:00 master systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+2026-03-15T08:04:58.785972+00:00 master systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+2026-03-15T08:05:01.623786+00:00 master CRON[3401865]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2026-03-15T08:05:08.289230+00:00 master systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+2026-03-15T08:05:08.321957+00:00 master systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+2026-03-15T08:05:08.335782+00:00 master systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+2026-03-15T08:05:08.340044+00:00 master systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+2026-03-15T08:05:08.631863+00:00 master systemd[3401925]: Queued start job for default target default.target.
+2026-03-15T08:05:08.660110+00:00 master systemd[3401925]: Created slice app.slice - User Application Slice.
+2026-03-15T08:05:08.660389+00:00 master systemd[3401925]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+2026-03-15T08:05:08.660471+00:00 master systemd[3401925]: Reached target paths.target - Paths.
+2026-03-15T08:05:08.660553+00:00 master systemd[3401925]: Reached target timers.target - Timers.
+2026-03-15T08:05:08.662041+00:00 master systemd[3401925]: Starting dbus.socket - D-Bus User Message Bus Socket...
+2026-03-15T08:05:08.662247+00:00 master systemd[3401925]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+2026-03-15T08:05:08.662326+00:00 master systemd[3401925]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+2026-03-15T08:05:08.662423+00:00 master systemd[3401925]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+2026-03-15T08:05:08.663881+00:00 master systemd[3401925]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+2026-03-15T08:05:08.664005+00:00 master systemd[3401925]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+2026-03-15T08:05:08.664137+00:00 master systemd[3401925]: Listening on keyboxd.socket - GnuPG public key management service.
+2026-03-15T08:05:08.664263+00:00 master systemd[3401925]: Listening on pk-debconf-helper.socket - debconf communication socket.
+2026-03-15T08:05:08.664381+00:00 master systemd[3401925]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+2026-03-15T08:05:08.677369+00:00 master systemd[3401925]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+2026-03-15T08:05:08.721334+00:00 master systemd[3401925]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+2026-03-15T08:05:08.721754+00:00 master systemd[3401925]: Reached target sockets.target - Sockets.
+2026-03-15T08:05:08.722018+00:00 master systemd[3401925]: Reached target basic.target - Basic System.
+2026-03-15T08:05:08.722284+00:00 master systemd[3401925]: Reached target default.target - Main User Target.
+2026-03-15T08:05:08.722474+00:00 master systemd[3401925]: Startup finished in 336ms.
+2026-03-15T08:05:08.722660+00:00 master systemd[1]: Started user@1000.service - User Manager for UID 1000.
+2026-03-15T08:05:08.727357+00:00 master systemd[1]: Started session-12002.scope - Session 12002 of User ubuntu.
+2026-03-15T08:09:14.957607+00:00 master k3s[881]: time="2026-03-15T08:09:14Z" level=info msg="COMPACT compactRev=8244319 targetCompactRev=8244722 currentRev=8245722"
+2026-03-15T08:09:14.963492+00:00 master k3s[881]: time="2026-03-15T08:09:14Z" level=info msg="COMPACT deleted 403 rows from 403 revisions in 6.856699ms - compacted to 8244722/8245722"
+2026-03-15T08:09:14.963677+00:00 master k3s[881]: time="2026-03-15T08:09:14Z" level=info msg="COMPACT compacted from 8244319 to 8244722 in 1 transactions over 7ms"
