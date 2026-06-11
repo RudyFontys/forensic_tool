@@ -1,3 +1,4 @@
+from pathlib import Path # Voor verschillende path aanduiding in Linux en Windows / of \
 import tkinter as tk
 
 from database.db import Database
