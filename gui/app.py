@@ -1,148 +1,96 @@
-"""Tkinter-gebruikersinterface voor de eerste projectfase."""
-
-from __future__ import annotations
-
 import tkinter as tk
-from pathlib import Path
-from tkinter import filedialog, messagebox, ttk
+from tkinter import filedialog, messagebox
 from tkinter.scrolledtext import ScrolledText
 
-from importer.import_logs import LogImporter
 
+class ForensicApp:
+    """Bevat alleen het venster en de acties van de gebruiker."""
 
-class ForensicToolApp(tk.Tk):
-    """GUI waarmee een onderzoeker één syslogbestand kan importeren."""
-
-    def __init__(self, importer: LogImporter, database_path: Path) -> None:
-        super().__init__()
+    def __init__(self, root, importer):
+        self.root = root
         self.importer = importer
-        self.database_path = database_path
+        self.filepath = ""
 
-        self.title("Forensic Syslog Tool")
-        self.geometry("780x500")
-        self.minsize(680, 420)
+        self.root.title("Forensic Syslog Import Tool")
+        self.root.geometry("700x450")
 
-        self.file_path_var = tk.StringVar()
-        self.server_name_var = tk.StringVar()
-        self.status_var = tk.StringVar(value="Kies een syslogbestand om te beginnen.")
+        self.create_widgets()
 
-        self._build_interface()
+    def create_widgets(self):
+        tk.Label(
+            self.root,
+            text="Syslogbestand"
+        ).pack(anchor="w", padx=10, pady=(10, 0))
 
-    def _build_interface(self) -> None:
-        main_frame = ttk.Frame(self, padding=16)
-        main_frame.pack(fill=tk.BOTH, expand=True)
-        main_frame.columnconfigure(1, weight=1)
-        main_frame.rowconfigure(4, weight=1)
+        file_frame = tk.Frame(self.root)
+        file_frame.pack(fill="x", padx=10)
 
-        ttk.Label(
-            main_frame,
-            text="Syslog importeren",
-            font=("TkDefaultFont", 15, "bold"),
-        ).grid(row=0, column=0, columnspan=3, sticky=tk.W, pady=(0, 14))
+        self.file_entry = tk.Entry(file_frame)
+        self.file_entry.pack(side="left", fill="x", expand=True)
 
-        ttk.Label(main_frame, text="Logbestand:").grid(
-            row=1, column=0, sticky=tk.W, padx=(0, 10), pady=5
-        )
-        ttk.Entry(main_frame, textvariable=self.file_path_var).grid(
-            row=1, column=1, sticky=tk.EW, pady=5
-        )
-        ttk.Button(main_frame, text="Bladeren…", command=self._select_file).grid(
-            row=1, column=2, padx=(10, 0), pady=5
-        )
+        tk.Button(
+            file_frame,
+            text="Bladeren",
+            command=self.choose_file
+        ).pack(side="left", padx=(5, 0))
 
-        ttk.Label(main_frame, text="Server override:").grid(
-            row=2, column=0, sticky=tk.W, padx=(0, 10), pady=5
-        )
-        ttk.Entry(main_frame, textvariable=self.server_name_var).grid(
-            row=2, column=1, sticky=tk.EW, pady=5
-        )
-        ttk.Label(main_frame, text="optioneel").grid(
-            row=2, column=2, sticky=tk.W, padx=(10, 0), pady=5
-        )
+        tk.Label(
+            self.root,
+            text="Servernaam override (optioneel)"
+        ).pack(anchor="w", padx=10, pady=(10, 0))
 
-        button_frame = ttk.Frame(main_frame)
-        button_frame.grid(row=3, column=0, columnspan=3, sticky=tk.EW, pady=(12, 10))
+        self.server_entry = tk.Entry(self.root)
+        self.server_entry.pack(fill="x", padx=10)
 
-        self.import_button = ttk.Button(
-            button_frame,
-            text="Importeren",
-            command=self._import_selected_file,
-        )
-        self.import_button.pack(side=tk.LEFT)
+        tk.Button(
+            self.root,
+            text="Importeer syslog",
+            command=self.import_logs
+        ).pack(pady=10)
 
-        ttk.Button(
-            button_frame,
-            text="Uitvoer wissen",
-            command=self._clear_output,
-        ).pack(side=tk.LEFT, padx=(10, 0))
+        tk.Label(
+            self.root,
+            text="Resultaat"
+        ).pack(anchor="w", padx=10)
 
-        self.output = ScrolledText(main_frame, wrap=tk.WORD, height=15, state=tk.DISABLED)
-        self.output.grid(row=4, column=0, columnspan=3, sticky=tk.NSEW)
+        self.output = ScrolledText(self.root, height=16)
+        self.output.pack(fill="both", expand=True, padx=10, pady=(0, 10))
 
-        ttk.Label(main_frame, textvariable=self.status_var).grid(
-            row=5, column=0, columnspan=3, sticky=tk.W, pady=(10, 0)
+    def choose_file(self):
+        selected_file = filedialog.askopenfilename(
+            title="Kies een syslogbestand",
+            filetypes=[("Logbestanden", "*.log *.txt"), ("Alle bestanden", "*.*")]
         )
 
-    def _select_file(self) -> None:
-        selected_path = filedialog.askopenfilename(
-            title="Selecteer een syslogbestand",
-            filetypes=(
-                ("Logbestanden", "*.log *.txt"),
-                ("Alle bestanden", "*.*"),
-            ),
-        )
-        if selected_path:
-            self.file_path_var.set(selected_path)
-            self.status_var.set(f"Geselecteerd: {selected_path}")
+        if selected_file:
+            self.filepath = selected_file
+            self.file_entry.delete(0, tk.END)
+            self.file_entry.insert(0, selected_file)
 
-    def _import_selected_file(self) -> None:
-        path_text = self.file_path_var.get().strip()
-        if not path_text:
-            messagebox.showwarning("Geen bestand", "Selecteer eerst een syslogbestand.")
+    def import_logs(self):
+        filepath = self.file_entry.get().strip()
+        server_name = self.server_entry.get().strip()
+
+        if not filepath:
+            messagebox.showwarning(
+                "Geen bestand",
+                "Kies eerst een syslogbestand."
+            )
             return
 
-        self.import_button.configure(state=tk.DISABLED)
-        self.status_var.set("Import wordt uitgevoerd…")
-        self.update_idletasks()
-
         try:
-            result = self.importer.import_file(
-                filepath=path_text,
-                server_name=self.server_name_var.get(),
+            imported, failed = self.importer.import_file(
+                filepath,
+                server_name if server_name else None
             )
-        except (OSError, ValueError, RuntimeError) as exc:
-            self.status_var.set("Import mislukt.")
-            messagebox.showerror("Importfout", str(exc))
-            self._append_output(f"FOUT: {exc}\n")
-        else:
-            report_lines = [
-                f"Bestand: {path_text}",
-                f"Database: {self.database_path}",
-                f"Geïmporteerde regels: {result.imported_count}",
-                f"Mislukte regels: {result.failed_count}",
-                f"Overgeslagen lege regels: {result.skipped_empty_count}",
-            ]
-            if result.failed_line_numbers:
-                numbers = ", ".join(map(str, result.failed_line_numbers[:30]))
-                suffix = " …" if len(result.failed_line_numbers) > 30 else ""
-                report_lines.append(f"Niet herkende regelnummers: {numbers}{suffix}")
 
-            self._append_output("\n".join(report_lines) + "\n" + "-" * 70 + "\n")
-            self.status_var.set(
-                f"Import gereed: {result.imported_count} gelukt, "
-                f"{result.failed_count} mislukt."
+            self.output.insert(
+                tk.END,
+                "Bestand: " + filepath + "\n"
+                + "Geïmporteerde regels: " + str(imported) + "\n"
+                + "Mislukte regels: " + str(failed) + "\n\n"
             )
-        finally:
-            self.import_button.configure(state=tk.NORMAL)
+            self.output.see(tk.END)
 
-    def _append_output(self, text: str) -> None:
-        self.output.configure(state=tk.NORMAL)
-        self.output.insert(tk.END, text)
-        self.output.see(tk.END)
-        self.output.configure(state=tk.DISABLED)
-
-    def _clear_output(self) -> None:
-        self.output.configure(state=tk.NORMAL)
-        self.output.delete("1.0", tk.END)
-        self.output.configure(state=tk.DISABLED)
-        self.status_var.set("Uitvoer gewist.")
+        except Exception as error:
+            messagebox.showerror("Importfout", str(error))

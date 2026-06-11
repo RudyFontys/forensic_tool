@@ -1,4 +1,4 @@
-2026-03-15T08:30:00+00:00 master sshd[42]: Failed password for root from 198.51.100.7 port 22 ssh2
-2026-03-15T08:31:12+00:00 master systemd[1]: Started Daily apt download activities.
-Mar 15 08:32:03 master sudo[2048]: student : TTY=pts/0 ; PWD=/home/student ; COMMAND=/usr/bin/cat /etc/passwd
-ongeldige regel om de foutenteller te demonstreren
+2026-03-15T08:30:00+00:00 server1 sshd[42]: Failed password for root from 198.51.100.7 port 22
+2026-03-15T08:31:00+00:00 server1 sshd[43]: Accepted password for student from 192.168.1.25 port 22
+2026-03-15T08:32:00+00:00 webserver nginx[88]: Client 203.0.113.50 requested /index.html
+dit is bewust geen geldige syslogregel

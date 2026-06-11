@@ -1,71 +1,54 @@
-"""Beheer van de SQLite-database en het databaseschema."""
-
-from __future__ import annotations
-
 import sqlite3
-from contextlib import contextmanager
-from pathlib import Path
-from typing import Iterator
 
 
-class DatabaseManager:
-    """Maakt databaseverbindingen en initialiseert het schema.
+class Database:
+    """Regelt alleen de verbinding en de tabellen van de database."""
 
-    Deze klasse is alleen verantwoordelijk voor technische databasezaken.
-    De importlogica staat bewust in ``LogImporter``.
-    """
+    def __init__(self, db_name="forensic.db"):
+        self.db_name = db_name
 
-    def __init__(self, db_path: str | Path) -> None:
-        self.db_path = Path(db_path)
+    def connect(self):
+        """Maak een gewone SQLite-verbinding."""
+        return sqlite3.connect(self.db_name)
 
-    def connect(self) -> sqlite3.Connection:
-        """Open een SQLite-verbinding met foreign keys ingeschakeld."""
-        self.db_path.parent.mkdir(parents=True, exist_ok=True)
-        connection = sqlite3.connect(self.db_path)
-        connection.row_factory = sqlite3.Row
-        connection.execute("PRAGMA foreign_keys = ON")
-        return connection
-
-    @contextmanager
-    def transaction(self) -> Iterator[sqlite3.Connection]:
-        """Lever een verbinding en voer commit of rollback automatisch uit."""
+    def create_tables(self):
+        """Maak de tabellen aan als ze nog niet bestaan."""
         connection = self.connect()
-        try:
-            yield connection
-            connection.commit()
-        except Exception:
-            connection.rollback()
-            raise
-        finally:
-            connection.close()
+        cursor = connection.cursor()
 
-    def initialize(self) -> None:
-        """Maak de tabellen en indexen aan wanneer deze nog niet bestaan."""
-        with self.transaction() as connection:
-            connection.executescript(
-                """
-                CREATE TABLE IF NOT EXISTS servers (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    name TEXT UNIQUE NOT NULL
-                );
-
-                CREATE TABLE IF NOT EXISTS logs (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    datetime TEXT NOT NULL,
-                    server_id INTEGER NOT NULL,
-                    service TEXT,
-                    message TEXT,
-                    ip TEXT,
-                    FOREIGN KEY (server_id) REFERENCES servers(id)
-                );
-
-                CREATE INDEX IF NOT EXISTS idx_logs_datetime
-                    ON logs(datetime);
-
-                CREATE INDEX IF NOT EXISTS idx_logs_server_id
-                    ON logs(server_id);
-
-                CREATE INDEX IF NOT EXISTS idx_logs_ip
-                    ON logs(ip);
-                """
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS servers (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT UNIQUE NOT NULL
             )
+        """)
+
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS logs (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                datetime TEXT NOT NULL,
+                server_id INTEGER NOT NULL,
+                service TEXT,
+                message TEXT,
+                ip TEXT,
+                FOREIGN KEY (server_id) REFERENCES servers(id)
+            )
+        """)
+
+        connection.commit()
+        connection.close()
+
+    def get_or_create_server(self, cursor, server_name):
+        """Geef het id van een server terug en maak de server zo nodig aan."""
+        cursor.execute(
+            "INSERT OR IGNORE INTO servers (name) VALUES (?)",
+            (server_name,)
+        )
+
+        cursor.execute(
+            "SELECT id FROM servers WHERE name = ?",
+            (server_name,)
+        )
+
+        result = cursor.fetchone()
+        return result[0]

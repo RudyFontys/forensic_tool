@@ -1,47 +1,43 @@
-from database.db import DatabaseManager
+from database.db import Database
 from importer.import_logs import LogImporter
 from ip.ip_checker import IpChecker
 from parser.syslog_parser import SyslogParser
 
 
-def test_importer_slaat_geldige_regel_op_en_telt_fout(tmp_path) -> None:
-    database = DatabaseManager(tmp_path / "test.db")
-    database.initialize()
-    importer = LogImporter(database, SyslogParser(default_year=2026), IpChecker())
+def test_import_file(tmp_path):
+    # tmp_path maakt een tijdelijke map. De echte forensic.db blijft onaangetast.
+    test_database = tmp_path / "test.db"
+    test_log = tmp_path / "test.log"
 
-    log_file = tmp_path / "auth.log"
-    log_file.write_text(
-        "2026-03-15T08:30:00+00:00 original sshd[42]: "
+    test_log.write_text(
+        "2026-03-15T08:30:00+00:00 server1 sshd[42]: "
         "Failed password from 198.51.100.7\n"
-        "dit is geen geldige syslogregel\n"
-        "\n",
-        encoding="utf-8",
+        "ongeldige regel\n",
+        encoding="utf-8"
     )
 
-    result = importer.import_file(log_file, server_name="onderzoek-server")
+    database = Database(str(test_database))
+    database.create_tables()
 
-    assert result.imported_count == 1
-    assert result.failed_count == 1
-    assert result.skipped_empty_count == 1
-    assert result.failed_line_numbers == (2,)
+    importer = LogImporter(
+        database,
+        SyslogParser(),
+        IpChecker()
+    )
 
+    imported, failed = importer.import_file(str(test_log))
+
+    # Hiermee controleren we het zichtbare resultaat van de import.
+    assert imported == 1
+    assert failed == 1
+
+    # Daarna lezen we de database terug om te controleren of de data echt is opgeslagen.
     connection = database.connect()
-    try:
-        row = connection.execute(
-            """
-            SELECT logs.datetime, servers.name, logs.service, logs.message, logs.ip
-            FROM logs
-            JOIN servers ON servers.id = logs.server_id
-            """
-        ).fetchone()
-    finally:
-        connection.close()
+    row = connection.execute("""
+        SELECT servers.name, logs.service, logs.ip
+        FROM logs
+        JOIN servers ON servers.id = logs.server_id
+    """).fetchone()
+    connection.close()
 
-    assert row is not None
-    assert tuple(row) == (
-        "2026-03-15 08:30:00",
-        "onderzoek-server",
-        "sshd",
-        "Failed password from 198.51.100.7",
-        "198.51.100.7",
-    )
+    assert row == ("server1", "sshd", "198.51.100.7")

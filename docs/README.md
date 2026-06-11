@@ -1,68 +1,72 @@
-# Forensic Syslog Tool – fase 1
+# Vereenvoudigde forensic syslogtool met OOP
 
-Deze versie vervangt de tijdelijke CLI door een Tkinter-GUI en past objectgeoriënteerde verantwoordelijkheden toe.
+Deze versie gebruikt wel objectgeoriënteerd programmeren, maar vermijdt bewust moeilijkere Python-onderdelen zoals:
+
+- `contextlib` en contextmanagers;
+- `typing` en uitgebreide type hints;
+- `__future__`;
+- dataclasses;
+- een apart `models.py`-bestand;
+- dependency-injection-frameworks.
+
+## Klassen en verantwoordelijkheden
+
+- `Database`: maakt verbinding en beheert de tabellen.
+- `SyslogParser`: zet één logregel om naar een dictionary.
+- `IpChecker`: zoekt een IP-adres in een melding.
+- `LogImporter`: leest een bestand en slaat regels op.
+- `ForensicApp`: toont de Tkinter-GUI.
+
+Dit past het Single Responsibility Principle eenvoudig toe: iedere klasse heeft één hoofdtaak.
+
+## Waarom toch classes?
+
+Een class groepeert gegevens en functies die bij elkaar horen. Bijvoorbeeld: `Database` onthoudt de naam van het databasebestand in `self.db_name`. De methodes `connect()`, `create_tables()` en `get_or_create_server()` horen allemaal bij databasebeheer.
+
+De losse onderdelen worden in `main.py` aan elkaar gekoppeld:
+
+```python
+database = Database("forensic.db")
+parser = SyslogParser()
+ip_checker = IpChecker()
+importer = LogImporter(database, parser, ip_checker)
+```
+
+Hierdoor blijft zichtbaar welk object waarvoor wordt gebruikt.
 
 ## Starten
 
-Open een terminal in deze map en voer uit:
+Voer dit uit vanuit de hoofdmap:
 
 ```bash
 python main.py
 ```
 
-De applicatie gebruikt standaard `forensic.db` in de projectmap. Bij de eerste start worden de tabellen en indexen automatisch aangemaakt. Met **Bladeren** selecteer je een logbestand. Een server override is optioneel; zonder override wordt de servernaam uit iedere syslogregel gebruikt.
+De database `forensic.db` wordt automatisch gemaakt als deze nog niet bestaat.
 
-## Klassen en verantwoordelijkheden
-
-- `DatabaseManager`: verbindingen, transacties en schema-initialisatie.
-- `SyslogParser`: omzetting van een tekstregel naar een logobject.
-- `IpChecker`: vinden en valideren van een IPv4-adres.
-- `LogImporter`: coördinatie van lezen, parseren en opslaan.
-- `ForensicToolApp`: alleen de gebruikersinterface en gebruikersinteractie.
-- `ParsedLogEntry` en `ImportResult`: vaste datamodellen voor gegevensuitwisseling.
-
-Deze verdeling voorkomt herhaalde code (DRY) en sluit aan bij het Single Responsibility Principle. `main.py` is de composition root: daar worden de objecten één keer samengesteld.
-
-## Tests uitvoeren
-
-Installeer pytest en voer de tests uit:
+## Tests installeren en uitvoeren
 
 ```bash
 python -m pip install -r requirements-dev.txt
 python -m pytest
 ```
 
-Er zijn bewust drie tests:
+Door `pytest.ini` krijg je automatisch uitgebreide uitvoer met de namen van de tests.
 
-1. **Parsertest** – controleert een representatieve geldige syslogregel en de vier belangrijke velden. Dit is kernlogica met veel kans op formaatfouten.
-2. **IP-test** – controleert dat een ongeldig IPv4-adres wordt afgewezen en een later geldig adres wel wordt gevonden. Alleen een regex zou `999.999.999.999` ten onrechte accepteren.
-3. **Importtest** – integratietest met een tijdelijke SQLite-database. Deze test controleert aantallen, server override, koppeling tussen `logs` en `servers`, en opslag van het IP-adres.
+## Onderbouwing van de drie testonderdelen
 
-### Vuistregels voor wat wel en niet wordt getest
+1. **IP-checker:** controleert invoer met en zonder IP-adres. Parametrisatie voorkomt herhaalde testcode.
+2. **Syslog-parser:** controleert de hoofdtaak van de parser en controleert dat ongeldige invoer `None` geeft.
+3. **Log-importer:** controleert de volledige keten van bestand naar database. Een tijdelijke database voorkomt wijzigingen in de echte onderzoeksdatabase.
 
-Wel automatisch testen:
+De GUI wordt voorlopig handmatig getest. Een GUI-test vraagt extra technieken voor vensters en muisklikken, terwijl de belangrijkste verwerkingslogica al apart automatisch wordt getest.
 
-- logica met duidelijke invoer en verwachte uitvoer;
-- foutgevoelige parsing en validatie;
-- databasegedrag in een geïsoleerde tijdelijke database;
-- eigen code en de samenwerking tussen eigen klassen.
+## Bewuste beperkingen van deze eerste versie
 
-Niet in deze fase automatisch testen:
+Deze leerbare eerste versie importeert alleen syslogregels in ISO-formaat, zoals:
 
-- of Tkinter-knoppen er visueel goed uitzien;
-- het standaardgedrag van `filedialog`, `messagebox`, SQLite of Tkinter zelf;
-- private hulpmethoden rechtstreeks, wanneer hetzelfde gedrag via een publieke methode getest wordt;
-- toekomstige query-, anomaly- en trusted-IP-functionaliteit die nog niet is geïmplementeerd.
+```text
+2026-03-15T08:30:00+00:00 server1 sshd[42]: Failed password from 198.51.100.7
+```
 
-## Handmatige GUI-test
-
-1. Start `python main.py`.
-2. Selecteer `voorbeeld_syslog.log`.
-3. Laat de server override leeg en importeer.
-4. Controleer dat 3 regels slagen en 1 regel mislukt.
-5. Herhaal met een server override, bijvoorbeeld `server-lab-01`.
-6. Controleer dat het uitvoervenster kan scrollen en dat **Uitvoer wissen** werkt.
-
-## Opmerking bij klassiek syslog
-
-Een klassiek syslogtijdstip zoals `Mar 15 08:32:03` bevat geen jaar. De parser gebruikt daarom het huidige jaar. Voor forensisch bewijs kan in een latere fase een importdialoog worden toegevoegd waarin de onderzoeker expliciet het jaar opgeeft.
+Querybeheer, tijdlijnselectie, vertrouwde IP-ranges en anomaliedetectie kunnen later als afzonderlijke stappen worden toegevoegd.
