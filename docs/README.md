@@ -1,13 +1,6 @@
-# Vereenvoudigde forensic syslogtool met OOP
+# forensic syslogtool met OOP
 
-Deze versie gebruikt wel objectgeoriënteerd programmeren, maar vermijdt bewust moeilijkere Python-onderdelen zoals:
-
-- `contextlib` en contextmanagers;
-- `typing` en uitgebreide type hints;
-- `__future__`;
-- dataclasses;
-- een apart `models.py`-bestand;
-- dependency-injection-frameworks.
+Deze versie gebruikt objectgeoriënteerd programmeren.
 
 ## Klassen en verantwoordelijkheden
 
@@ -61,9 +54,8 @@ Door `pytest.ini` krijg je automatisch uitgebreide uitvoer met de namen van de t
 
 De GUI wordt voorlopig handmatig getest. Een GUI-test vraagt extra technieken voor vensters en muisklikken, terwijl de belangrijkste verwerkingslogica al apart automatisch wordt getest.
 
-## Bewuste beperkingen van deze eerste versie
 
-Deze leerbare eerste versie importeert alleen syslogregels in ISO-formaat, zoals:
+Deze 2e versie met GUI importeert alleen syslogregels in ISO-formaat, zoals:
 
 ```text
 2026-03-15T08:30:00+00:00 server1 sshd[42]: Failed password from 198.51.100.7
