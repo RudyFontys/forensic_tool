@@ -1,1 +1,1 @@
-# Waarom __init__.py? __init__.py vertelt Python: "deze map is een package/module die geïmporteerd mag worden."
+"""Package database."""
