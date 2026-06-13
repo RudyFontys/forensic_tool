@@ -18,12 +18,10 @@ Een class groepeert gegevens en functies die bij elkaar horen. Bijvoorbeeld: `Da
 
 De losse onderdelen worden in `main.py` aan elkaar gekoppeld:
 
-```python
 database = Database("forensic.db")
 parser = SyslogParser()
 ip_checker = IpChecker()
 importer = LogImporter(database, parser, ip_checker)
-```
 
 Hierdoor blijft zichtbaar welk object waarvoor wordt gebruikt.
 
@@ -31,18 +29,14 @@ Hierdoor blijft zichtbaar welk object waarvoor wordt gebruikt.
 
 Voer dit uit vanuit de hoofdmap:
 
-```bash
 python main.py
-```
 
 De database `forensic.db` wordt automatisch gemaakt als deze nog niet bestaat.
 
 ## Tests installeren en uitvoeren
 
-```bash
 python -m pip install -r requirements-dev.txt
 python -m pytest
-```
 
 Door `pytest.ini` krijg je automatisch uitgebreide uitvoer met de namen van de tests.
 
@@ -57,8 +51,6 @@ De GUI wordt voorlopig handmatig getest. Een GUI-test vraagt extra technieken vo
 
 Deze 2e versie met GUI importeert alleen syslogregels in ISO-formaat, zoals:
 
-```text
 2026-03-15T08:30:00+00:00 server1 sshd[42]: Failed password from 198.51.100.7
-```
 
 Querybeheer, tijdlijnselectie, vertrouwde IP-ranges en anomaliedetectie kunnen later als afzonderlijke stappen worden toegevoegd.

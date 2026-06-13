@@ -1,6 +1,6 @@
-from pathlib import Path # Voor verschillende path aanduiding in Linux en Windows / of \
 import tkinter as tk
 
+from analysis.queries import QueryManager
 from database.db import Database
 from gui.app import ForensicApp
 from importer.import_logs import LogImporter
@@ -9,17 +9,19 @@ from parser.syslog_parser import SyslogParser
 
 
 def main():
-    # Maak de onderdelen van de applicatie aan.
+    # Maak de database en tabellen.
     database = Database("forensic.db")
     database.create_tables()
 
+    # Maak de onderdelen voor importeren en onderzoeken.
     parser = SyslogParser()
     ip_checker = IpChecker()
     importer = LogImporter(database, parser, ip_checker)
+    query_manager = QueryManager(database)
 
-    # Start daarna het Tkinter-venster.
+    # Start het hoofdvenster.
     root = tk.Tk()
-    ForensicApp(root, importer)
+    ForensicApp(root, database, importer, query_manager)
     root.mainloop()
 
 

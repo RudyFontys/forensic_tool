@@ -1,97 +1,52 @@
-from pathlib import Path # Voor verschillende path aanduiding in Linux en Windows / of \
-import tkinter as tk
-from tkinter import filedialog, messagebox
-from tkinter.scrolledtext import ScrolledText
+from tkinter import ttk
+
+from gui.import_tab import ImportTab
+from gui.manage_tab import ManageTab
+from gui.query_tab import QueryTab
 
 
 class ForensicApp:
-    """Bevat alleen het venster en de acties van de gebruiker."""
+    """Maakt het hoofdvenster en koppelt de drie schermonderdelen."""
 
-    def __init__(self, root, importer):
+    def __init__(self, root, database, importer, query_manager):
         self.root = root
+        self.database = database
         self.importer = importer
-        self.filepath = ""
+        self.query_manager = query_manager
 
-        self.root.title("Forensic Syslog Import Tool")
-        self.root.geometry("700x450")
+        self.root.title("Forensic Syslog Tool")
+        self.root.geometry("1150x720")
 
-        self.create_widgets()
+        self.create_tabs()
 
-    def create_widgets(self):
-        tk.Label(
-            self.root,
-            text="Syslogbestand"
-        ).pack(anchor="w", padx=10, pady=(10, 0))
+    def create_tabs(self):
+        notebook = ttk.Notebook(self.root)
+        notebook.pack(fill="both", expand=True)
 
-        file_frame = tk.Frame(self.root)
-        file_frame.pack(fill="x", padx=10)
-
-        self.file_entry = tk.Entry(file_frame)
-        self.file_entry.pack(side="left", fill="x", expand=True)
-
-        tk.Button(
-            file_frame,
-            text="Bladeren",
-            command=self.choose_file
-        ).pack(side="left", padx=(5, 0))
-
-        tk.Label(
-            self.root,
-            text="Servernaam override (optioneel)"
-        ).pack(anchor="w", padx=10, pady=(10, 0))
-
-        self.server_entry = tk.Entry(self.root)
-        self.server_entry.pack(fill="x", padx=10)
-
-        tk.Button(
-            self.root,
-            text="Importeer syslog",
-            command=self.import_logs
-        ).pack(pady=10)
-
-        tk.Label(
-            self.root,
-            text="Resultaat"
-        ).pack(anchor="w", padx=10)
-
-        self.output = ScrolledText(self.root, height=16)
-        self.output.pack(fill="both", expand=True, padx=10, pady=(0, 10))
-
-    def choose_file(self):
-        selected_file = filedialog.askopenfilename(
-            title="Kies een syslogbestand",
-            filetypes=[("Logbestanden", "*.log *.txt"), ("Alle bestanden", "*.*")]
+        self.import_tab = ImportTab(
+            notebook,
+            self.importer,
+            self.refresh_lists
         )
 
-        if selected_file:
-            self.filepath = selected_file
-            self.file_entry.delete(0, tk.END)
-            self.file_entry.insert(0, selected_file)
+        self.query_tab = QueryTab(
+            notebook,
+            self.database,
+            self.query_manager
+        )
 
-    def import_logs(self):
-        filepath = self.file_entry.get().strip()
-        server_name = self.server_entry.get().strip()
+        self.manage_tab = ManageTab(
+            notebook,
+            self.database,
+            self.refresh_lists
+        )
 
-        if not filepath:
-            messagebox.showwarning(
-                "Geen bestand",
-                "Kies eerst een syslogbestand."
-            )
-            return
+        notebook.add(self.import_tab.frame, text="Importeren")
+        notebook.add(self.query_tab.frame, text="Onderzoeken")
+        notebook.add(self.manage_tab.frame, text="Beheren")
 
-        try:
-            imported, failed = self.importer.import_file(
-                filepath,
-                server_name if server_name else None
-            )
-
-            self.output.insert(
-                tk.END,
-                "Bestand: " + filepath + "\n"
-                + "Geïmporteerde regels: " + str(imported) + "\n"
-                + "Mislukte regels: " + str(failed) + "\n\n"
-            )
-            self.output.see(tk.END)
-
-        except Exception as error:
-            messagebox.showerror("Importfout", str(error))
+    def refresh_lists(self):
+        """Werk alle server- en querykeuzelijsten opnieuw bij."""
+        self.query_tab.refresh_servers()
+        self.query_tab.refresh_saved_queries()
+        self.manage_tab.refresh_servers()

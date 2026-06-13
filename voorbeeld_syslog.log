@@ -1,4 +1,6 @@
-2026-03-15T08:30:00+00:00 server1 sshd[42]: Failed password for root from 198.51.100.7 port 22
+2026-03-15T07:15:00+00:00 server1 sshd[40]: Failed password for root from 198.51.100.7 port 22
+2026-03-15T08:30:00+00:00 server1 sshd[42]: Failed password for admin from 198.51.100.7 port 22
 2026-03-15T08:31:00+00:00 server1 sshd[43]: Accepted password for student from 192.168.1.25 port 22
 2026-03-15T08:32:00+00:00 webserver nginx[88]: Client 203.0.113.50 requested /index.html
+2026-03-15T18:45:00+00:00 server1 sshd[44]: Failed password for root from 203.0.113.25 port 22
 dit is bewust geen geldige syslogregel

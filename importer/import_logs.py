@@ -1,4 +1,3 @@
-from pathlib import Path # Voor verschillende path aanduiding in Linux en Windows / of \
 import os
 
 
