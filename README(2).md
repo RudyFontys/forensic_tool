@@ -71,6 +71,20 @@ python main.py
 
 ## Tests
 
+### test_syslog_parser.py
+Voor de parser wordt pytest.mark.parametrize gebruikt, zodat beide ondersteunde syslogformaten met dezelfde testlogica worden gecontroleerd. Voor de importer wordt een pytest-fixture en tmp_path gebruikt, zodat iedere test een volledig geïsoleerde tijdelijke database krijgt en de echte database nooit wordt aangepast.
+
+### test_log_importer.py
+Deze test gebruikt: @pytest.fixture om de importer en database voor te bereiden;
+de ingebouwde pytest-fixture tmp_path;
+pytest.raises om een verwachte fout te controleren.
+
+### Wat hiermee wordt getest
+
+De parsertests controleren de eigen verantwoordelijkheid van SyslogParser: tekst omzetten naar een correct datamodel en ongeldige regels weigeren.
+De importertest is bewust een integratietest. Deze controleert dat LogImporter, SyslogParser, IpChecker en DatabaseManager correct samenwerken. Door tmp_path te gebruiken wordt een tijdelijke database aangemaakt. Je echte forensic.db wordt hierdoor tijdens de tests niet gewijzigd.
+
+
 python -m pip install -r requirements-dev.txt
 
 python -m pytest -v
