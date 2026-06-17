@@ -72,11 +72,17 @@ python main.py
 ## Tests
 
 python -m pip install -r requirements-dev.txt
+
 python -m pytest -v
+
 De -v: Gebruik de verbose-optie om de namen van de uitgevoerde tests te zien
+
 python -m pytest -vv
+
 Voor nog meer details
+
 Met -rA toont pytest een overzicht van alle testresultaten:
+
 python -m pytest -v -rA
 
 
