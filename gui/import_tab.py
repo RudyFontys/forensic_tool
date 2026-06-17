@@ -56,7 +56,7 @@ class ImportTab:
     def choose_file(self):
         selected_file = filedialog.askopenfilename(
             title="Kies een syslogbestand",
-            filetypes=[("Logbestanden", "*.log *.txt"), ("Alle bestanden", "*.*")]
+            filetypes=[("Alle bestanden", "*.*"), ("Logbestanden", "*.log *.txt"), ("Onzinbestanden", "*.onzin")]
         )
 
         if selected_file:
