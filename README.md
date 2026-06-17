@@ -1,56 +1,117 @@
-# forensic syslogtool met OOP
+# Forensic syslogtool – OOP-uitbreiding voor het lezen van de syslog info uit de database
 
-Deze versie gebruikt objectgeoriënteerd programmeren.
+## Documentatie en diagrammen
+
+In de map docs staan diverse markdown bestanden. Deze zijn het beste in GitHub te bekijken omdat dan de diagrammen in Mermaid gemaakt ook zichtbaar zijn. Zonder Mermaid ondersteuning kan ook in de map met PNG formaat gekeken worden voor sommige diagrammen. De oude documentatie staat in Word formaat in de map word_documenten. 
+
+In deze docs map vind je onder andere:
+
+- Userstories
+- ERD
+- UC diagram
+- Klassendiagrammen
+- Message Sequence diagrammen
+- V-model en toelichting
+- Toelichting op diagrammen
+
+Deze versie bouwt voort op de eerste OOP-versie. 
+
+## De nieuwe features zijn:
+
+- Server kiezen uit een keuzelijst die rechtstreeks uit SQLite wordt gevuld.
+- Logregels filteren op server en optioneel op begin- en eindtijd.
+- Een handmatige SQL-filtervoorwaarde testen.
+- Een geteste filter opslaan met een naam en beschrijving.
+- Een opgeslagen query opnieuw kiezen en uitvoeren.
+- Opgeslagen query's verwijderen.
+- Een server met alle bijbehorende logregels verwijderen.
+- Resultaten bekijken in een tabel met verticale en horizontale schuifbalken.
 
 ## Klassen en verantwoordelijkheden
 
-- `Database`: maakt verbinding en beheert de tabellen.
-- `SyslogParser`: zet één logregel om naar een dictionary.
-- `IpChecker`: zoekt een IP-adres in een melding.
-- `LogImporter`: leest een bestand en slaat regels op.
-- `ForensicApp`: toont de Tkinter-GUI.
+- `Database`: verbinding, tabellen, serverlijst en verwijderen van een server.
+- `SyslogParser`: zet één syslogregel om naar velden.
+- `IpChecker`: zoekt een IP-adres in de melding.
+- `LogImporter`: importeert een bestand.
+- `QueryManager`: zoekt logs en beheert opgeslagen query's.
+- `ForensicApp`: maakt het hoofdvenster en de tabbladen.
+- `ImportTab`: gebruikersscherm voor importeren.
+- `QueryTab`: gebruikersscherm voor onderzoeken en querybeheer.
+- `ManageTab`: gebruikersscherm voor het verwijderen van serverlogs.
 
-Dit past het Single Responsibility Principle eenvoudig toe: iedere klasse heeft één hoofdtaak.
+Deze indeling volgt het Single Responsibility Principle: iedere klasse heeft één duidelijke hoofdtaak.
 
-## Waarom toch classes?
+## Database-uitbreiding
 
-Een class groepeert gegevens en functies die bij elkaar horen. Bijvoorbeeld: `Database` onthoudt de naam van het databasebestand in `self.db_name`. De methodes `connect()`, `create_tables()` en `get_or_create_server()` horen allemaal bij databasebeheer.
+Naast `servers` en `logs` wordt automatisch deze tabel gemaakt om queries op te kunnen slaan:
 
-De losse onderdelen worden in `main.py` aan elkaar gekoppeld:
+CREATE TABLE IF NOT EXISTS saved_queries (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT UNIQUE NOT NULL,
+    description TEXT,
+    where_clause TEXT NOT NULL
+)
 
-database = Database("forensic.db")
-parser = SyslogParser()
-ip_checker = IpChecker()
-importer = LogImporter(database, parser, ip_checker)
+## Werken met handmatige query's
 
-Hierdoor blijft zichtbaar welk object waarvoor wordt gebruikt.
+De onderzoeker vult alleen een voorwaarde in die normaal na `WHERE` staat (dat is makkelijker voor de onderzoeker zonder SQL kennis). Voorbeelden:
+
+service = 'sshd'
+
+service = 'sshd' AND message LIKE '%Failed password%'
+
+ip = '198.51.100.7'
+
+De server en tijdsperiode worden via aparte invoervelden toegevoegd. Daardoor hoeft de gebruiker geen volledige `SELECT` met een `JOIN` te schrijven.
+
+Om een query op te slaan:
+
+1. Kies een server of `Alle servers`.
+2. Vul eventueel een begin- en eindtijd in.
+3. Vul de queryvoorwaarde in.
+4. Klik op **Query uitvoeren / testen**.
+5. Vul een naam en beschrijving in.
+6. Klik op **Geteste query opslaan**.
+
+## Verwijderen van sysloggegevens
+
+Op het tabblad **Beheren** wordt een server gekozen uit de database. Daarna worden de server en alle gekoppelde logregels verwijderd.
+
+Let op: het oorspronkelijke `syslog`-bestand op de schijf wordt niet verwijderd. Alleen de geïmporteerde gegevens in SQLite worden verwijderd. Wanneer meerdere bestanden onder dezelfde servernaam zijn geïmporteerd, worden alle logregels van die server verwijderd.
 
 ## Starten
 
-Voer dit uit vanuit de hoofdmap:
-
 python main.py
 
-De database `forensic.db` wordt automatisch gemaakt als deze nog niet bestaat.
+## Tests
 
-## Tests installeren en uitvoeren
+### test_syslog_parser.py
+Voor de parser wordt pytest.mark.parametrize gebruikt, zodat beide ondersteunde syslogformaten met dezelfde testlogica worden gecontroleerd. Voor de importer wordt een pytest-fixture en tmp_path gebruikt, zodat iedere test een volledig geïsoleerde tijdelijke database krijgt en de echte database nooit wordt aangepast.
+
+### test_log_importer.py
+Deze test gebruikt: @pytest.fixture om de importer en database voor te bereiden;
+de ingebouwde pytest-fixture tmp_path;
+pytest.raises om een verwachte fout te controleren.
+
+### Wat hiermee wordt getest
+
+De parsertests controleren de eigen verantwoordelijkheid van SyslogParser: tekst omzetten naar een correct datamodel en ongeldige regels weigeren.
+De importertest is bewust een integratietest. Deze controleert dat LogImporter, SyslogParser, IpChecker en DatabaseManager correct samenwerken. Door tmp_path te gebruiken wordt een tijdelijke database aangemaakt. Je echte forensic.db wordt hierdoor tijdens de tests niet gewijzigd.
+
 
 python -m pip install -r requirements-dev.txt
-python -m pytest
 
-Door `pytest.ini` krijg je automatisch uitgebreide uitvoer met de namen van de tests.
+python -m pytest -v
 
-## Onderbouwing van de drie testonderdelen
+De -v: Gebruik de verbose-optie om de namen van de uitgevoerde tests te zien
 
-1. **IP-checker:** controleert invoer met en zonder IP-adres. Parametrisatie voorkomt herhaalde testcode.
-2. **Syslog-parser:** controleert de hoofdtaak van de parser en controleert dat ongeldige invoer `None` geeft.
-3. **Log-importer:** controleert de volledige keten van bestand naar database. Een tijdelijke database voorkomt wijzigingen in de echte onderzoeksdatabase.
+python -m pytest -vv
 
-De GUI wordt voorlopig handmatig getest. Een GUI-test vraagt extra technieken voor vensters en muisklikken, terwijl de belangrijkste verwerkingslogica al apart automatisch wordt getest.
+Voor nog meer details
+
+Met -rA toont pytest een overzicht van alle testresultaten:
+
+python -m pytest -v -rA
 
 
-Deze 2e versie met GUI importeert alleen syslogregels in ISO-formaat, zoals:
-
-2026-03-15T08:30:00+00:00 server1 sshd[42]: Failed password from 198.51.100.7
-
-Querybeheer, tijdlijnselectie, vertrouwde IP-ranges en anomaliedetectie kunnen later als afzonderlijke stappen worden toegevoegd.
+De nieuwe tests gebruiken een tijdelijke SQLite-database en wijzigen de echte `forensic.db` niet.
