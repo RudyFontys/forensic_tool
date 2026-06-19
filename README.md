@@ -2,7 +2,8 @@
 
 ## Documentatie en diagrammen
 
-In de map docs staan diverse markdown bestanden. Deze zijn het beste in GitHub te bekijken omdat dan de diagrammen in Mermaid gemaakt ook zichtbaar zijn. Zonder Mermaid ondersteuning kan ook in de map met PNG formaat gekeken worden voor sommige diagrammen. De oude documentatie staat in Word formaat in de map word_documenten. 
+In de map docs staan diverse markdown bestanden. Deze zijn het beste in GitHub te bekijken omdat dan de diagrammen in Mermaid gemaakt ook zichtbaar zijn. 
+https://github.com/RudyFontys/forensic_tool/tree/main/docs
 
 In deze docs map vind je onder andere:
 
